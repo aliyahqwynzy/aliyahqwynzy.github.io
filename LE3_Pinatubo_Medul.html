@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+            <title>The Philippines Today | Home</title>
+
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+                
+
+                body {
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            
+            .header {
+                background-color: #1B4965;
+                height: 150px;
+                padding-top: 0px;
+                margin-top: -48px;
+                vertical-align: middle;
+                margin-bottom: -40px;
+            }
+
+            .webname { 
+                font-size: 36pt;
+                vertical-align: middle;
+                text-align: center;
+                font-family: 'Oswald', sans-serif;
+                color: white;
+                font-weight: bold;
+                display: inline;
+                padding-top: 20px;
+            }
+
+            img {
+                vertical-align: middle;
+            }
+
+            .subtitle {
+                font-family: 'Montserrat', sans-serif;
+                text-align: center;
+                margin-top: -60px;
+                color: white;
+                font-size: 13pt;
+                padding-bottom: 20px;
+            }
+
+            ul {
+                text-align: center;
+                list-style: none;
+                margin-top: -15px;
+                color: black;
+                background-color: #E3E3E2;
+                padding-top: 5px;
+                padding-bottom: 7px;
+                font-family: 'Oswald', sans-serif;
+            }
+
+            li {
+                display: inline;
+                text-decoration: none;
+                margin-right: 5px;
+                margin-left: 5px;
+                font-size: 18px;
+                vertical-align: middle;
+                color: black;
+                font-family: 'Oswald', sans-serif;
+            }
+
+            li a {
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-family: 'Oswald', sans-serif;
+                font-weight: bold;
+            }
+
+            li a:hover{
+                text-decoration: underline;
+            }
+
+            #table1 {
+                border-spacing: 30px;
+                margin-top: -30px;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: -20px;
+            }
+
+            #secondarycontent_one {
+                width: 30%;
+                border-right: 1px solid black;
+                padding-right: 30px;
+                vertical-align: top;
+            }
+
+            .latestnews a {
+                text-align: left;
+                text-decoration: none;
+                color: black;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 12pt;
+            }
+
+            .latestnews a:hover {
+                text-decoration: underline;
+                color: #1B4965;
+                font-weight: bold;
+            }
+
+            .all a {
+                text-decoration: none;
+                color: #1B4965;
+                font-family: 'Oswald', sans-serif;
+                font-size: 13pt;
+                font-weight: bold;
+                float: right;
+            }
+
+            .all a:hover {
+                text-decoration: underline;
+            }
+
+            #maincontent_one {
+                vertical-align: top;
+            }
+
+            #coviddaily {
+                text-decoration: none;
+                color: white;
+                font-family: 'Oswald', sans-serif;
+                font-weight: bold;
+                text-align: left;
+                font-size: 32pt;
+                margin-top: 0px;
+                text-align: center
+            }
+            
+            #covidupdate{
+                margin-top: 0px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: -10px;
+            }
+
+            #date {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 12pt;
+                margin-top: -45px;
+                font-weight: bold;
+                text-align: center;
+                color: white;
+            }
+            
+            .total {
+                font-family: 'Montserrat', sans-serif;
+                text-align: center;
+                width: 17.5%;
+                padding: 10px;
+            }
+
+            .headlinecovidtrending {
+                font-size: 13pt;
+                text-align: center; vertical-align: middle;
+                color: white;
+            }
+            
+            .num {
+                text-align: center;
+                font-size: 20pt;
+                margin-top: -20px;
+                font-weight: bolder; 
+                color: white;
+            }
+
+            .trending {
+                color: #1B4965;
+                font-family: 'Oswald', sans-serif;
+                font-weight: bold;
+                text-align: left;
+                font-size: 28pt;
+                margin-top: -10px;
+            }
+
+            .trendingsubtitle {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 12pt;
+                margin-top: -40px;
+                font-weight: bold;
+            }
+
+            #trendingtable {
+                border-spacing: 20px;
+                margin-left: -20px;
+                margin-top: -25px;
+            }
+
+            .trendinglabel {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 11pt;
+            }
+
+            .trendingcaption {
+                text-align: left;
+                text-decoration: none;
+                color: black;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                font-size: 18pt;
+                margin-top: -15px;
+                margin-bottom: 7px;
+            }
+
+            .trendingcaption a {
+                text-align: left;
+                text-decoration: none;
+                color: black;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                font-size: 18pt;
+                margin-top: -15px;
+                margin-bottom: 7px;
+            }
+
+            .trendingcaption a:hover {
+                text-decoration: underline;
+                color: #1B4965;
+            }
+
+            .trendingexcerpts {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 11pt;
+            }
+
+            .quicknews {
+                padding: 30px;
+                width: 100%;
+                margin-top: -20px;
+                vertical-align: top;
+            }
+
+            .quicknews1 {
+                padding: 30px;
+                width: 100%;
+                margin-top: -60px;
+                vertical-align: top;
+            }
+
+            .quicknewssections {
+                width: 23%;
+                padding: 10px;
+                vertical-align: top;
+            }
+
+            .quicknewslabel {
+                font-family: 'Oswald', sans-serif;
+                font-weight: bold;
+                font-size: 16pt;
+                font-weight: bold;
+                vertical-align: top;
+                margin-top: 0px;
+                color: #1B4965;
+                margin-bottom: 10px;
+            }
+
+            .quicknewsarticles a{
+                text-decoration: none;
+                color: black;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 11pt;
+                vertical-align: top;
+            }
+
+            .quicknewsarticles a:hover {
+                text-decoration: underline;
+                font-weight: bold;
+                color: #1B4965;
+            }
+
+            .quicknewsexcerpts {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 9.5pt;
+            }
+
+            .morenews {
+                text-align: left;
+                color: #1B4965;
+                font-weight: bold;
+                font-family: 'Oswald', sans-serif;
+                margin-left: 9px;
+                font-size: 28pt;
+                margin-top: -5px;
+            }
+
+            .seemore a{
+                text-decoration: none;
+                color: #1B4965;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 10pt;
+                font-weight: bold;
+                float: right;
+            }
+
+            .seemore a:hover {
+                text-decoration: underline;
+            }
+
+            .footer {
+                background-color: #1B4965;
+                height: 350px;
+                vertical-align: top;
+                padding-top: 20px;
+                margin-bottom: -30px;
+                margin-top: -20px;
+            }
+
+            .footerlabel {
+                font-family: 'Oswald', sans-serif;
+                font-weight: bold;
+                font-size: 19pt;
+                font-weight: bold;
+                vertical-align: top;
+                color: white;
+                text-align: center;
+                margin-top: -10px;
+            }
+
+            .footercontent {
+                width: 20%;
+                vertical-align: top;
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+
+            .footerlabel1 {
+                font-family: 'Oswald', sans-serif;
+                font-weight: bold;
+                font-size: 14pt;
+                font-weight: bold;
+                vertical-align: top;
+                color: white;
+                text-align: center;
+                margin-bottom: -15px;
+            }
+
+            .footercaption a {
+                font-family: 'Montserrat', sans-serif;
+                color: white;
+                font-size: 11pt;
+                vertical-align:top;
+                text-align: center;
+                margin-bottom: -10px;
+                text-decoration: none;
+            }
+
+            .footercaption a:hover {
+                text-decoration: underline;
+            }
+
+            .footercaption {
+                font-family: 'Montserrat', sans-serif;
+                color: white;
+                font-size: 11pt;
+                vertical-align:top;
+                text-align: center;
+                margin-bottom: -10px;
+            }
+
+            .copyright {
+                font-family: 'Montserrat', sans-serif;
+                color: white;
+                font-size: 11pt;
+                vertical-align: top;
+                margin-top: 0px;
+                text-align: center;
+                font-weight: bold;
+            }
+            </style> 
+            
+
+        <body>
+            <div class="header">    
+                <div class="webname">
+                    <p><img src="https://lh3.googleusercontent.com/wVDI_Uy465VR707jisq-ke7YTxRpYxxaX52ln0eSzyur2Z7HmYzrnjCf9yKVHHkpc-radYi521_fuGqr3PNEgSdSZO1bD0pOMPSQk-uVauMiJ1qCPNvgSkjG0CI-XGke9t7Mr9CGShPEQ9Sci9AHS_VSgEBSB1qlXOP-crBCxDu3Bqf_1E356S4ld5ybjddrVvpxizjGkDlqgdDumx3HmZt0OmNngW9DmZdDfhxAksEz3Z9iCNIoUyHfelAQ5Beqxm_yaTqWpykrqbnW0y-VjSIw_Vq7kHWsITSPnKIQk6cGwyartido3DUhT64xtl4uBsgRFSM6euTw5NujijQwj84FDZ8cN1UXecuyvfL92XRSsGUUC8g26SOo8DLQV-bsJOzSAt42Qbz0AO_aegZpEZJhVer-kWDlmubhoKKVyRgr1w9dPdvqd6NWtaYvjffB8l1DwUJGuT7rqAJ6Avv0BiA1Z15h2F6ovtGYvdgFjDjZhDP7XGDogx_tRxkRahKMOMf8MEZhzCbnc__nm6jlrwu5tUy1tCEzup2WGD5Zr3VOdFXf8vyyQ7BgrRvipL4GlnwRMiJKaFUWgBDWZo5bpjRmEABOYBd-nhuK6oi1ME-Ns8iCtcul2xL3qYVo2zvsgpirROiZqGCsqG8ezAfA9EIIwM--Cxr5GrAFlckNYIdS0A-d3OzuidcNP4Vad6hoIJFuV2asoIGpjLJQLQG_ltfE=w756-h714-no?authuser=0" width="80" alt="logo">THE PHILIPPINES TODAY <img src="https://lh3.googleusercontent.com/wVDI_Uy465VR707jisq-ke7YTxRpYxxaX52ln0eSzyur2Z7HmYzrnjCf9yKVHHkpc-radYi521_fuGqr3PNEgSdSZO1bD0pOMPSQk-uVauMiJ1qCPNvgSkjG0CI-XGke9t7Mr9CGShPEQ9Sci9AHS_VSgEBSB1qlXOP-crBCxDu3Bqf_1E356S4ld5ybjddrVvpxizjGkDlqgdDumx3HmZt0OmNngW9DmZdDfhxAksEz3Z9iCNIoUyHfelAQ5Beqxm_yaTqWpykrqbnW0y-VjSIw_Vq7kHWsITSPnKIQk6cGwyartido3DUhT64xtl4uBsgRFSM6euTw5NujijQwj84FDZ8cN1UXecuyvfL92XRSsGUUC8g26SOo8DLQV-bsJOzSAt42Qbz0AO_aegZpEZJhVer-kWDlmubhoKKVyRgr1w9dPdvqd6NWtaYvjffB8l1DwUJGuT7rqAJ6Avv0BiA1Z15h2F6ovtGYvdgFjDjZhDP7XGDogx_tRxkRahKMOMf8MEZhzCbnc__nm6jlrwu5tUy1tCEzup2WGD5Zr3VOdFXf8vyyQ7BgrRvipL4GlnwRMiJKaFUWgBDWZo5bpjRmEABOYBd-nhuK6oi1ME-Ns8iCtcul2xL3qYVo2zvsgpirROiZqGCsqG8ezAfA9EIIwM--Cxr5GrAFlckNYIdS0A-d3OzuidcNP4Vad6hoIJFuV2asoIGpjLJQLQG_ltfE=w756-h714-no?authuser=0" width="80" alt="logo"><br><p class="subtitle">Get Accurate News In The Fastest Way Possible</p>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li>|</li>
+                    <li><a href="#">CORONAVIRUS</a></li>
+                    <li>|</li>
+                    <li><a href="#">NEWS</a></li>
+                    <li>|</li>
+                    <li><a href="#">POLITICS</a></li>
+                    <li>|</li>
+                    <li><a href="#">BUSINESS</a></li>
+                    <li>|</li>
+                    <li><a href="#">ENTERTAINMENT</a></li>
+                    <li>|</li>
+                    <li><a href="#">OPINION</a></li>
+                    <li>|</li>
+                    <li><a href="#">LIFESTYLE</a></li>
+                    <li>|</li>
+                    <li><a href="#">SPORTS</a></li>
+                    <li>|</li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li>|</li>
+                </ul>
+            </div>
+
+            <table id="table1">
+                    <tr>
+                        <td id="secondarycontent_one">
+                            <p style="text-align: left; font-family: 'Oswald', sans-serif; font-size: 20pt; font-weight: bold; margin-bottom: -10px; color: #1B4965; margin-top: -5px;">LATEST NEWS</p>
+                            
+                            <div class="latestnews">
+                                <p><a href="https://news.abs-cbn.com/news/10/26/21/ongpin-asks-court-to-dismiss-drugs-case">Ongpin asks court to dismiss drugs case</a></p>
+
+                                <p><a href="https://news.abs-cbn.com/video/news/10/26/21/govt-implements-stricter-rules-at-dolomite-beach">Gov't implements stricter rules at dolomite beach</a></p>
+                                    
+                                <p><a href="https://news.abs-cbn.com/overseas/10/26/21/myanmars-suu-kyi-denies-juntas-allegation">Myanmar's Suu Kyi denies junta's allegation</a></p>
+
+                                <p><a href="https://news.abs-cbn.com/news/10/26/21/dry-run-sa-mix-and-match-trials-ng-covid-vaccines-sinimulan">Dry run sa 'mix-and-match' trials ng COVID vaccines, sinimulan</a></p>
+                                
+                                <p><a href="https://news.abs-cbn.com/news/10/26/21/kat-de-castro-denies-rumors-about-dad-nolis-death">Kat de Castro says dad Noli 'absolutely fine', denies death rumors</a></p>
+
+                                <p><a href="https://news.abs-cbn.com/news/10/26/21/lacson-questions-alleged-discrepancies-in-sap-distribution">Lacson says gov't supposedly used outdated data for SAP during pandemic</a></p>
+
+                                <p><a href="https://news.abs-cbn.com/news/10/28/21/duterte-aukus-must-not-hinder-regional-cooperation">President Duterte says AUKUS 'must not hinder, complicate' regional cooperation</a></p>
+
+                                <p><a href="https://news.abs-cbn.com/news/10/28/21/senators-scrutinize-michael-yangs-princeton-certificate">New ASEAN chair Cambodia to keep pressure on Myanmar junta</a></p>
+                            </div>
+
+                            <div class="all">
+                                <p><a href="#">SEE ALL LATEST NEWS</a></p>
+                            </div>
+
+                            <p style="text-align: left; font-family: 'Oswald', sans-serif; font-size: 20pt; font-weight: bold; color: #1B4965; padding-top: 30px;">WEATHER UPDATE</p>
+
+                            <p class="latestnews" style="margin-top: -20px;"><a href="https://news.abs-cbn.com/news/10/24/21/lpa-spotted-off-palawan-to-bring-rains-over-parts-of-luzon-visayas">LPA spotted off Palawan to bring rains over parts of Luzon, Visayas</a></p>
+
+                            <img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2020/news/05/03/lpa.jpg" width="280" alt="weather report">
+
+                            <p class="latestnews"><a href="https://news.abs-cbn.com/news/10/26/21/pagasa-announces-onset-of-amihan-season">PAGASA announces onset of amihan season, Visayas</a></p>
+
+                            <p class="latestnews"><a href="https://news.abs-cbn.com/news/10/26/21/https://news.abs-cbn.com/news/10/28/21/pagasa-says-2-or-3-more-typhoons-likely-in-november">PAGASA says 2 or 3 more typhoons likely in November</a></p>
+
+                            <div class="all">
+                                <p><a href="#">SEE ALL WEATHER REPORTS</a></p>
+                            </div>
+                        </td>
+
+                        <td id="maincontent_one">
+                            <div>
+                                <p class="trending">TRENDING</p>
+                                <p class="trendingsubtitle">See What's Happening Right Now</p>
+
+                                <table id="trendingtable">
+                                    <tr>
+                                        <td style="width: 35%; vertical-align: top;">
+                                            <p class="trendinglabel">Entertainment</p>
+                                            <p class="trendingcaption"><a href="https://youtu.be/npQSTCIKwqk">Alex Gonzaga-Morada Shares Her First Pregnancy Journey</a></p>
+
+                                            <p class="trendingexcerpts">On October 17, 2021, the television host shared a photo of her pregnancy test that confirmed she was pregnant two months ago. Unfortunately, three weeks ago, she was told she had a blighted ovum, also known as anembryonic pregnancy.</p>
+
+                                            <img src="https://i.ytimg.com/vi/npQSTCIKwqk/maxresdefault.jpg" width="400" alt="Alex Pregnancy Vlog">
+
+                                            <p class="trendinglabel">Politics</p>
+                                            <p class="trendingcaption"><a href="https://news.abs-cbn.com/news/10/27/21/oxford-confirms-marcos-jr-failed-to-get-degree">Oxford University confirms Marcos Jr. did not graduate, failed to complete degree</a></p>
+
+                                            <p class="trendingexcerpts">The University of Oxford, one of the world's most prestigious academic institutions, on Wednesday confirmed that presidential aspirant Ferdinand "Bongbong" Marcos, Jr. failed to complete his degree and did not graduate, contrary to his earlier claims.</p>
+
+                                            <img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2021/life/10/27/20211006-election-coc-president-marcos-jc4.jpg" width="400" alt="Bong Bong Marcos">
+
+                                        </td>
+
+                                        <td style="width: 35%; vertical-align: top;">
+                                            <p class="trendinglabel">News</p>
+                                            <p class="trendingcaption"><a href="https://www.cnnphilippines.com/news/2021/2/26/maypasok-2021-special-working-days.html">President Duterte lessens non-working days for 2021</a></p>
+
+                                            <p class="trendingexcerpts">“For the country to recover from the adverse impact of the COVID-19 pandemic, there is a need to encourage economic productivity by, among others, minimizing work disruption and commemorating some special holidays as special (working) days instead,” Duterte’s proclamation read.</p>
+
+                                            <img src="https://media.philstar.com/photos/2021/02/26/af_2021-02-26_22-00-06.jpg" width="400"  alt="President Duterte">
+                                            
+                                            <p class="trendinglabel">Business</p>
+                                            <p class="trendingcaption"><a href="https://news.abs-cbn.com/business/10/27/21/lucio-tan-throwing-505-million-lifeline-to-pal">Lucio Tan throwing $505 million lifeline to PAL as part of airline's reorganization</a></p>
+
+                                            <p class="trendingexcerpts">Tycoon Lucio Tan’s Buona Sorte Holdings Inc (BSHI) will P12.75 billion, in fresh capital into Philippine Airlines as part of the ailing carrier’s restructuring, PAL Holdings disclosed on Wednesday.</p>
+
+                                            <img src="https://assets2.rappler.com/612F469A6EA84F6BAE882D2B94A4B421/img/872FD8DA95EE41BCA50D1B10B1D24B4E/philippine-airline-shutterstock-november-22-2019-1612251161908-546.jpg" width="400" alt="Philippine Airlines">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+
+            <div style="background-color:#1B4965;">
+                <hr>
+                <p id="coviddaily">CORONAVIRUS UPDATE</p>
+                <p id="date">As of 7:00 PM October 28, 2021</p>
+
+                <table id="covidupdate">
+                    <tr>
+                        <td class="total">
+                            <p class="headlinecovidtrending">New Cases</p>
+
+                            <p class="num">3,177</p>
+                        </td>
+
+                        <td class="total">
+                            <p class="headlinecovidtrending">New Deaths</p>
+
+                            <p class="num">271</p>
+                        </td>
+
+                        <td class="total">
+                            <p class="headlinecovidtrending">Total Cases</p>
+
+                            <p class="num">2,772,491</p>
+                        </td>
+
+                        <td class="total">
+                            <p class="headlinecovidtrending">Total Deaths</p>
+
+                            <p class="num">42,575</p>
+                        </td>
+
+                        <td class="total">
+                            <p class="headlinecovidtrending">Total Recoveries</p>
+
+                            <p class="num">2,680,081</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+
+            <table class="quicknews">
+                <tr>
+                    <td colspan="4">
+                        <p class="morenews">MORE NEWS</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="quicknewssections">
+                        <p class="quicknewslabel" style="margin-top: -40px;">CORONAVIRUS</p>
+
+                        <img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2021/reuters/10/28/20211015-covid-teen-vaccine-rtr.jpg" width="130"  style="margin-right: 10px; float: left;" alt="pic">
+                        
+                        <p class="quicknewsarticles" style="display: inline;"><a href="https://news.abs-cbn.com/news/10/28/21/ph-targets-over-9m-kids-for-covid-shots-by-yearend-doh">PH aims to vaccinate 80 pct of 12M kids vs COVID-19 by yearend: DOH</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/news/10/28/21/ph-wants-more-vaccinators-for-covid-19-jabs-of-minors">Gov’t eyes more vaccinators as nationwide vaccination of minors looms</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/news/10/28/21/near-expiry-covid-19-vaccines-already-deployed-says-doh">Near-expiry COVID-19 vaccines already deployed, says DOH</a></p>
+
+                        <p class="seemore"><a href="#">See More...</a></p>
+                    </td>
+
+                    <td class="quicknewssections">
+                        <p class="quicknewslabel" style="margin-top: -40px;">NEWS</p>
+
+                        <img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2021/news/10/28/20211027-undas-manila-north-cemetery-gc-5340.jpg" width="130" style="margin-right: 10px; float: left;" alt="pic">
+
+                        <p class="quicknewsarticles" style="display: inline;" ><a href="https://news.abs-cbn.com/news/10/28/21/thousands-visit-graves-in-ph-ahead-of-undas-closure">Filipinos flock to cemeteries ahead of All Saints' Day closure</a><br></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/news/10/28/21/maynilad-customers-store-water-ahead-of-service-interruption">Maynilad customers in NCR, Cavite store water ahead of service interruption</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/video/news/10/28/21/pitx-exec-backs-higher-capacity-for-puvs">PITX exec backs higher passenger cap for public utility vehicles</a></p>
+
+                        <p class="seemore"><a href="#">See More...</a></p>
+                    </td>
+                    
+                    <td class="quicknewssections">
+                        <p class="quicknewslabel" style="margin-top: -40px;">POLITICS</p>
+                        
+                        <img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2021/news/10/28/20211028-moreno-robredo-lacson-pacquiao-deguzman.jpg?ext=.jpg" width="130" style="margin-right: 10px; float: left;" alt="pic">
+
+                        <p class="quicknewsarticles" style="display: inline;"><a href="https://news.abs-cbn.com/news/10/28/21/2022-presidential-aspirants-continue-provincial-visits">2022 presidential aspirants continue touching base with different sectors</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/news/10/27/21/comelec-backs-p100k-fine-ban-vs-nuisance-bets">Comelec backs P100k fine, ban vs nuisance bets; watchdog cries foul</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/news/10/27/21/what-some-2022-presidential-aspirants-say-about-vote-buying">What are the opinions of some 2022 presidential aspirants about vote-buying?</a></p>
+
+                        <p class="seemore"><a href="#">See More...</a></p>
+                    </td>
+
+                    <td class="quicknewssections">
+                        <p class="quicknewslabel" style="margin-top: -40px;">BUSINESS</p>
+
+                        <img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2021/news/10/28/20211021-covid-dolomite-beach-manila-bay-gc-3348.jpg?ext=.jpg" width="130" style="margin-right: 10px; vertical-align: middle; float: left;" alt="pic">
+                        
+                        <p class="quicknewsarticles" style="display: inline;"><a href="https://news.abs-cbn.com/business/10/28/21/economy-to-gain-p36b-per-week-if-ncr-eases-to-alert-level-2-neda">Economy to gain P3.6 billion per week if NCR eases to Alert Level 2: NEDA</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/business/10/28/21/businesses-support-downgrade-to-alert-level-2-adviser">Businesses support easing restrictions as COVID-19 cases decline: presidential adviser</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/business/10/28/21/global-labor-market-hamstrung-by-unequal-vaccine-distribution-ilo">Global labor market hamstrung by unequal vaccine distribution: ILO</a></p>
+
+                        <p class="seemore"><a href="#">See More...</a></p>
+                    </td>             
+                </tr>
+            </table>
+
+            <table class="quicknews1">
+                <tr>
+                    <td class="quicknewssections">
+                        <p class="quicknewslabel">ENTERTAINMENT</p>
+
+                        <img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2021/entertainment/10/28/20211028_kris.jpg" width="130" style="margin-right: 10px; float: left;" alt="pic">
+                        
+                        <p class="quicknewsarticles" style="display: inline;"><a href="https://news.abs-cbn.com/entertainment/10/28/21/kris-tells-fianc-ang-tanga-ko-kung-pakawalan-pa-kita">Kris Aquino tells Mel Sarmiento: ‘Ang tanga ko na kung pakawalan pa kita’</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/entertainment/10/28/21/what-kylie-padilla-says-on-women-empowerment">Amid controversies, Kylie Padilla has this message on women empowerment</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/entertainment/10/28/21/watch-aespa-talks-about-mini-album-savage">K-pop group aespa talks about first mini album ‘Savage’</a></p>
+
+                        <p class="seemore"><a href="#">See More...</a></p>
+                    </td>
+
+                    <td class="quicknewssections">
+                        <p class="quicknewslabel">OPINION</p>
+
+                        <img src="https://mb.com.ph/wp-content/uploads/2021/10/40936.jpeg" width="95" style="margin-right: 10px; float: left;" alt="pic">
+
+                        <p class="quicknewsarticles" style="display: inline;"><a href="https://mb.com.ph/2021/10/29/more-vaccinations-are-good-news-as-cities-achieve-herd-immunity/">More vaccinations<br>are good news as<br>cities achieve herd immunity</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://mb.com.ph/2021/10/26/abundance-of-covid-vaccine-supply-warrants-shift-to-simultaneous-approach-in-inoculation/">Abundance of COVID vaccine supply warrants shift to simultaneous approach in inoculation</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://mb.com.ph/2021/10/25/to-the-candidates-talk-about-issues-discuss-your-platforms/">To the candidates: Talk about issues, discuss your platforms</a></p>
+
+                        <p class="seemore"><a href="#">See More...</a></p>
+                    </td>
+                    
+                    <td class="quicknewssections">
+                        <p class="quicknewslabel">LIFESTYLE</p>
+                        
+                        <img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2021/life/10/27/best-friends-with-down-syndrome-suit-up-as-mario-and-luigi-1.jpg" width="130" style="margin-right: 10px; float: left;" alt="pic">
+
+                        <p class="quicknewsarticles" style="display: inline;"><a href="https://news.abs-cbn.com/life/10/27/21/look-best-friends-with-down-syndrome-dress-up-as-mario-luigi">Best friends with Down syndrome suit up as Mario and Luigi for Halloween</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/life/10/28/21/pia-wurtzbach-catriona-gray-in-miss-universe-nfts">Pia Wurtzbach, Catriona Gray in Miss Universe NFT collection</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/life/10/28/21/maureen-montagne-in-top-18-of-miss-globes-head-to-head-challenge">Maureen Montagne in Top 18 of Miss Globe's head to head challenge</a><br></p>
+
+                        <p class="seemore"><a href="#">See More...</a></p>
+                    </td>
+
+                    <td class="quicknewssections">
+                        <p class="quicknewslabel">SPORTS</p>
+
+                        <img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2021/news/10/28/sisi.jpg" width="130" style="margin-right: 10px; vertical-align: middle; float: left;" alt="pic">
+                        
+                        <p class="quicknewsarticles" style="display: inline;"><a href="https://news.abs-cbn.com/sports/10/28/21/creamline-squads-eye-back-to-back-titles-on-bvr-on-tour">Creamline squads eye back-to-back titles on BVR on Tour</a><br></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/sports/10/27/21/pacquiao-gets-outplayed-by-bata-reyes-in-friendly-chess-match"><br>Pacquiao gets outplayed by 'Bata' Reyes in friendly chess match</a></p>
+
+                        <p class="quicknewsarticles"><a href="https://news.abs-cbn.com/sports/10/27/21/pba-tnt-a-step-away-from-ph-cup-crown">PBA: TNT a step away from PH Cup crown with Game 4 victory</a><br></p>
+
+                        <p class="seemore"><a href="#">See More...</a></p>
+                    </td>                    
+                </tr>
+            </table>
+
+            <div>
+                <table class="footer">
+                    <tr style="margin-bottom: -30px">
+                        <td></td>
+                        <td class="footercontent">
+                            <p class="footerlabel">FOLLOW US</p>
+                        
+                            <p class="footerlabel1">FACEBOOK</p>
+                            <p class="footercaption"><a href="#">The Philippines Today</a></p>
+
+                            <p class="footerlabel1">TWITTER</p>
+                            <p class="footercaption"><a href="#">The Philippines Today</a></p>
+
+                            <p class="footerlabel1">YOUTUBE</p>
+                            <p class="footercaption"><a href="#">The Philippines Today</a></p>
+
+                            <p class="footerlabel1">INSTAGRAM</p>
+                            <p class="footercaption"><a href="#">thephilippinestoday</a></p>
+                        </td>
+
+                        <td class="footercontent">
+                            <p class="footerlabel">CONTACT US</p>
+
+                            <p class="footerlabel1">EMAIL ADDRESS</p>
+                            <p class="footercaption"><a href="#">yourquestions@tptmedia.com</a></p>
+
+                            <p class="footerlabel1">TELEPHONE NUMBER</p>
+                            <p class="footercaption">+632 947 3850</p>
+                        </td>
+
+                        <td class="footercontent">
+                            <p class="footerlabel">VISIT US</p>
+
+                            <p class="footerlabel1">ADDRESS</p>
+                            <p class="footercaption">The Philippines Today, Unit 909 and 910, The Infinity Tower, 26th Street, Bonifacio Global City, Taguig City, Metro Manila, Philippines</p>
+
+                            <p class="footerlabel1">WEBSITE</p>
+                            <p class="footercaption"><a href="#">https://thephilippinestoday.com</a></p>
+                        </td>
+
+                        <td></td>
+                    </tr>
+
+                    <tr style="margin-top: -50px;">
+                        <td colspan="5">
+                            <p class="copyright">© 2021 TPT Corporation. All Rights Reserved.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </body>
+    </html>         
