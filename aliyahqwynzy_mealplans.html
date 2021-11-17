@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>QwynTasty | Meal Plans</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rye&family=Special+Elite&display=swap');
+        
+
+        #titlebanner {
+            width: 1440px;
+            height: 200px;
+            background-image: url(https://lh3.googleusercontent.com/7Xwa-rjHQTyO-yFril-VmFemTh5ogcRBmdId9Wrf64932rYw8tnxt7DCM7rR0c48c81aaKsj7yOqUM83-RIHAjfiLAUzXuR9ov8pD2lF-3n9Ft4aXpful-Cw2fEkgScpLsZJYmXpudYF2mF0HnZYXrEBtAUzDNUoWjnikBVrQogwa8Kd-7_t5u8Na5AJmBwKVxrWIrxEP9_ZUfVx1i6fGmosNVspgF5tZbLk2GxjZvTZUIiPkfegFuJYFi0OYIUIY4VkMFjrzHy60UR6A2b0ksK6g4liknUtu5aYyfWz16xqjGfNOOqInhUpw1IK55dTZofEV_BWyBpOUMBRZlV45W1W_d7JaDn_TRBeABags0W8NkbO0X_fBLK9dcAwLIn-AurJ-ANifH_OMhfjgD9UeyrXXb4XMpqi2Fs4uvlTML9tatDBCZUM6RDxTO5b3AzTyddlqVo6XgNkEFaAwy_cqdZmsTC406Ih6jQ8pZ-n5khvhUc36dEd1PPhqzWjQacui1TvxUKNxICDnqhkvdQ_XDOU-nRlmDry7jbBW6_6UMz9GcxhOGBICX6vnicGto2BxbJH7gl3UhtnUAzUqDGuioWZ4xMrjVC8D_bDbrpnD4ugxUbzGMlG7dlqf7MyUp3yWqkHKRT24H29CR77TLyZcVDgQhmiYVZeVLZyhqty5BL8sDS5rePdT78YrGn64Lh7tfUVyGbZ9Qn2L2qqF3YeoEx9=w1440-h200-no?authuser=0);
+            margin-left: -8px;
+            margin-top: -8px;
+            background-position: center;
+        }
+
+        .navbar {
+            margin-left: -8px;
+            background-color: #E8D5C4;
+            width: 1440px;
+        }
+
+        .navbarcell {
+            padding-left: 20px;
+        }
+
+        .navbar-content a {
+            font-family: 'Special Elite', cursive;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 20pt;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar-content a:hover {
+            text-decoration: underline;
+            color: #332B32;
+        }
+
+        #navbar-date {
+            text-align: right;
+            font-family: 'Special Elite', cursive;
+            padding-left: 20px;
+            padding-right: 30px;
+            font-size: 20pt;
+            color: black;
+            width: 560px;
+        }
+
+        .title {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 36pt;
+            color: black;
+            font-weight: bold;
+            vertical-align: top;
+            text-decoration: none;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 22pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-top: -50px;
+        }
+
+        .sections-title {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 28pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: bold;
+        }
+
+        .sections-subtitle {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 20pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-left: 30px;
+            margin-top: -35px;
+        }
+
+        .articles-table {
+            width: 1440px;
+            margin-left: -8px;
+        }
+
+        .articles-cells {
+            width: 400px;
+            padding-left: 30px;
+            padding-right: 30px;
+            vertical-align: top;
+        }
+
+        .articles-img {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            text-align: center;
+            border: 2px solid black
+        }
+
+        .foodname a {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 24pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+        }
+
+        .foodname a:hover {
+            text-decoration: underline;
+        }
+
+        .foodname-shortdescription {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14pt;
+            margin-top: -10px;
+        }
+
+        .see-more a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13pt;
+            float: right;
+            color: black;
+            text-decoration: none;
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+
+        .see-more a:hover {
+            font-weight: bold;
+        }
+
+        .footer {
+            width: 1440px;
+            height: 350px;
+            background-color: #332B32;
+            margin-left: -8px;
+        }
+
+        .footer-headlines {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 24pt;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .footer-details {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 16pt;
+            text-align: center;
+            vertical-align: top;
+            margin-top: -12px;
+        }
+
+        .footer-copyright {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 16pt;
+            text-align: center;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+
+        #recommendations {
+            background-color: #332B32;
+            padding-top: 5px;
+            padding-bottom: 20px;
+            width: 1432px;
+        }
+
+        .recommendation-title {
+            font-family: 'Special Elite', cursive;
+            font-size: 32pt;
+            color: white;
+            text-align: center;
+        }
+
+        .recommend-subtitle {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 19pt;
+            color: white;
+            vertical-align: top;
+            text-decoration: none;
+            margin-top: -40px;
+        }
+
+        .recommend-name a {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 24pt;
+            color: white;
+            vertical-align: top;
+            text-decoration: none;
+        }
+
+        .recommend-name a:hover {
+            text-decoration: underline;
+        }
+
+        .recommend-shortdescription {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14pt;
+            margin-top: -10px;
+            color: white;
+        }
+
+        .recommend-see-more a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13pt;
+            float: right;
+            color: white;
+            text-decoration: none;
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+
+        .recommend-see-more a:hover {
+            font-weight: bold;
+        }
+
+        .recommend-img {
+            width: 650px;
+            height: 250px;
+            object-fit: cover;
+            text-align: center;
+            border: 2px solid white;
+        }
+
+        .cheftips {
+            font-family: 'Special Elite', cursive;
+            font-size: 32pt;
+            text-align: center;
+        }
+
+        .tips-subtitle {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 19pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-top: -40px;
+        }
+
+        .description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18pt;
+            margin-left: 30px;
+            text-align: center;
+        }
+    </style>
+    </head>
+
+    <body style="width: 1440px; margin: 0px">
+        <div id="titlebanner"></div>
+        
+        <table class="navbar">
+            <tr>
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="index.html">HOME</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_recipes.html">RECIPES</a></p>
+                </td>
+ 
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_mealplans.html">MEAL PLANS</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_chefs.html">CHEFS</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_about.html">ABOUT</a></p>
+                </td>
+
+                <td id="navbar-date">
+                    <p>NOVEMBER | 2021</p>
+                </td>
+            </tr>
+        </table>
+
+        <div>
+            <p class="title">MEAL PLANS</p>
+            <p class="subtitle">YOU CAN ENJOY FOOD AND SATISFY YOUR CRAVINGS WHILE BEING HEALTHY!<br>HEALTH 101</p>
+        </div>
+
+        <div class="description">
+            <p>Do you want to live longer? Want to have a healthy lifestyle, but don't want to give up your happiness, <br>aka tasty foods? Are your dieseases limiting you? Here are the meal plans that could greatly help you have a <br>healthy living, but still enjoying yourself!
+        </div>
+
+        <div>
+            <p class="sections-title">CLEAN-EATING MEAL PLANS</p>
+            <p class="sections-subtitle">WHOLE GRAINS, FRUITS AND VEGETABLES, LEAN PROTEINS & HEALTHY FATS AND LEGUMES</p>
+
+            <table class="articles-table">
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://cf-images.us-east-1.prod.boltdns.net/v1/static/5118192885001/d54b9207-df56-4869-a06f-3abc97357d52/18be823a-2c5a-4a16-8900-fdf80dd55070/1280x720/match/image.jpg&w=1280&h=720&q=90&c=cc" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.eatingwell.com/article/7882092/clean-eating-meal-plan-for-beginners/">Clean-Eating Meal Plan for Beginners</a></p>
+
+                        <p class="foodname-shortdescription">Follow this meal plan for a week of healthy and easy recipes that work well for both beginners and seasoned cooks looking to simplify their routine . . .</p>
+
+                        <p class="see-more"><a href="https://www.eatingwell.com/article/7882092/clean-eating-meal-plan-for-beginners/">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F12%2F31%2FStuffed-Sweet-Potato-with-Hummus-Dressing.jpeg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.eatingwell.com/article/7883904/clean-eating-meal-plan-on-a-budget/">Clean-Eating Meal Plan on a Budget</a></p>
+
+                        <p class="foodname-shortdescription">Healthy eating doesn't need to cost a fortune. In this meal plan, you'll get a whole week of wholesome meals and snacks which clocks in around $100, so you can . . .</p>
+
+                        <p class="see-more"><a href="https://www.eatingwell.com/article/7883904/clean-eating-meal-plan-on-a-budget/">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2018%2F11%2F27122258%2FChickPeas-960x960.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.eatingwell.com/article/289100/1-day-clean-eating-meal-plan/">1-Day Clean-Eating Meal Plan</a></p>
+
+                        <p class="foodname-shortdescription">Eating clean doesn't have to be complicated or cumbersome. This 1-day meal plan is a perfect example of just how deliciously simple clean eating can be . . .</p>
+
+                        <p class="see-more"><a href="https://www.eatingwell.com/article/289100/1-day-clean-eating-meal-plan/">Read More →</a></p>
+                    </td>
+                </tr>
+            </table>
+            </div>
+    
+            <div>
+                <p class="sections-title">BLOOD PRESSURE MEAL PLANS</p>
+                <p class="sections-subtitle">MEALS TO AVOID HIGH BLOOD PRESSURE</p>
+    
+                <table class="articles-table">
+                    <tr>
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F08%2F18%2Fchicken-hummus-bowls.jpeg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/7834741/healthy-high-blood-pressure-meal-plan-for-beginners/">Healthy High-Blood Pressure Meal Plan for Beginners</a></p>
+    
+                            <p class="foodname-shortdescription">Follow this plan for a week of beginner heart-healthy recipes to lower your blood pressure and improve your health . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/7834741/healthy-high-blood-pressure-meal-plan-for-beginners/">Read More →</a></p>
+                        </td>
+    
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2018%2F04%2F27122510%2F40920881.jpg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/289979/7-day-healthy-blood-pressure-meal-plan-1200-calories/">7-Day Healthy Blood Pressure Meal Plan: 1,200 Calories</a></p>
+    
+                            <p class="foodname-shortdescription">About 75 million American adults have high blood pressure. Untreated, hypertension can lead to heart attack and stroke. . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/289979/7-day-healthy-blood-pressure-meal-plan-1200-calories/">Read More →</a></p>
+                        </td>
+    
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F12%2F11%2FGrilled-Fennel-Rubbed-Pork-Chops-Apricots.jpg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/291105/1-day-1500-calorie-meal-plan-for-high-blood-pressure/">1-Day, 1,500-Calorie Meal Plan for High-Blood Pressure</a></p>
+    
+                            <p class="foodname-shortdescription">At 1,500 calories, with plenty of potassium-rich foods and just a little bit of salt, this one-day meal plan can set you on the right path toward a healthy blood pressure. . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/291105/1-day-1500-calorie-meal-plan-for-high-blood-pressure/">Read More →</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <p class="sections-title">HEART HEALTHY MEAL PLANS</p>
+                <p class="sections-subtitle">MEALS FOR A HEALTHIER HEART</p>
+    
+                <table class="articles-table">
+                    <tr>
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F08%2F19%2Fwhite-bean-and-sun-dried-tomato-gnocchi.jpg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/7921490/comfort-food-meal-plan-to-lower-high-cholesterol/">Comfort Food Meal Plan to Lower High Cholesterol</a></p>
+    
+                            <p class="foodname-shortdescription">Think your comfort foods are off-limits when lowering cholesterol? Think again. These prove that you can have both worlds!</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/7921490/comfort-food-meal-plan-to-lower-high-cholesterol/">Read More →</a></p>
+                        </td>
+    
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F01%2F08%2Fpesto-chicken-bake.jpeg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/7884046/heart-healthy-diet-plan-for-beginners/">Heart-Healthy Diet Plan for Beginners</a></p>
+    
+                            <p class="foodname-shortdescription">A heart-healthy diet plan isn't about restricting, it's about enjoying! Let this easy-to-follow meal plan be your guide . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/7884046/heart-healthy-diet-plan-for-beginners/">Read More →</a></p>
+                        </td>
+    
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F02%2FRoasted-Salmon-Caprese.jpg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/7677248/pescatarian-diet-plan/">Pescatarian Diet Plan</a></p>
+    
+                            <p class="foodname-shortdescription">Healthy plant-based ingredients combine with tasty fish and seafood to create this weeklong pescatarian diet meal plans . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/7677248/pescatarian-diet-plan/">Read More →</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </div> 
+
+            <div>
+                <p class="sections-title">PREGNANCY MEAL PLANS</p>
+                <p class="sections-subtitle">ENJOY FOOD WHILE PROTECTING YOUR BABY</p>
+    
+                <table class="articles-table">
+                    <tr>
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2014%2F01%2F27194822%2F3755556.jpg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/290543/1-day-dairy-free-healthy-pregnancy-meal-plan-2900-calories/">1-Day Dairy-Free Healthy-Pregnancy Meal Plan: 2,900 Calories</a></p>
+    
+                            <p class="foodname-shortdescription">This delicious meal plan gives you and your growing baby the nutrients necessary for a healthy pregnancy . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/290543/1-day-dairy-free-healthy-pregnancy-meal-plan-2900-calories/">Read More →</a></p>
+                        </td>
+    
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://cf-images.us-east-1.prod.boltdns.net/v1/static/5118192885001/46ded4cb-01e8-456f-9f6c-97c908ac0623/78281735-44b3-4bec-a487-583c6492bf82/1280x720/match/image.jpg&w=1280&h=720&q=90&c=cc" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/289979/7-day-healthy-blood-pressure-meal-plan-1200-calories/">1-Day Vegetarian Healthy Pregnancy Meal Plan: 2,500 Calories</a></p>
+    
+                            <p class="foodname-shortdescription">This one-day plan of healthy vegetarian meals for pregnancy will help you get the nutrition you and your baby need . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/289979/7-day-healthy-blood-pressure-meal-plan-1200-calories/">Read More →</a></p>
+                        </td>
+    
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2017%2F06%2Fhealthy-pregnancy-meal-plan700px.jpg&q=85" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/290339/1-day-low-sodium-healthy-pregnancy-meal-plan-2200-calories/">1-Day Low-Sodium Healthy-Pregnancy Meal Plan: 2,200 calories</a></p>
+    
+                            <p class="foodname-shortdescription">To make meal planning easier for those who are diagnosed with preeclampsia, we created this one-day plan of healthy low-sodium meals for pregnancy. . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/290339/1-day-low-sodium-healthy-pregnancy-meal-plan-2200-calories/">Read More →</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <p class="sections-title">DIABETES MEAL PLANS</p>
+                <p class="sections-subtitle">HEALTHY FOODS TO MAINTAIN BALANCED BLOOD SUGAR</p>
+    
+                <table class="articles-table">
+                    <tr>
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F03%2F31%2FSkillet-Lemon-Chicken-Potatoes-with-Kale.jpeg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/7894304/diabetes-meal-plan-on-a-budget/">Diabetes Meal Plan on a Budget</a></p>
+    
+                            <p class="foodname-shortdescription">Eating healthy for your diabetes doesn't have to cost a fortune. In this 7-day plan, you'll get a week of nutritious and delicious meals and snacks for about $100.</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/7894304/diabetes-meal-plan-on-a-budget/">Read More →</a></p>
+                        </td>
+    
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F05%2F27200257%2Fsimple-grilled-salmon-broccolini-rice.jpg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/291744/gestational-diabetes-meal-plan-diet-guidelines/">Gestational Diabetes Meal Plan & Diet Guidelines</a></p>
+    
+                            <p class="foodname-shortdescription">Healthy eating during pregnancy looks different each day, and you should feel free to eat the foods you want . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/291744/gestational-diabetes-meal-plan-diet-guidelines/">Read More →</a></p>
+                        </td>
+    
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26230709%2F4582294.jpg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/290459/the-best-7-day-diabetes-meal-plan/">The Best 7-Day Diabetes Meal Plan
+                            </a></p>
+    
+                            <p class="foodname-shortdescription">This healthy 1,200-calorie weight-loss meal plan for diabetes makes it easy to balance your blood sugar . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/290459/the-best-7-day-diabetes-meal-plan/">Read More →</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div>
+                <p class="sections-title">WEIGHT-LOSS MEAL PLANS</p>
+                <p class="sections-subtitle">ENJOY EATING DELICIOUS FOOD WHILE TRYING TO BE FIT</p>
+    
+                <table class="articles-table">
+                    <tr>
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2017%2F11%2F27114255%2F45014761.jpg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/290676/7-day-flat-belly-meal-plan/">7-Day Meal Plan to Help Lose Belly Fat</a></p>
+    
+                            <p class="foodname-shortdescription">Want to lessen your belly fat?Follow along with this 7-day meal plan to lose inches in your midsection . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/290676/7-day-flat-belly-meal-plan/">Read More →</a></p>
+                        </td>
+    
+                        <td class="articles-cells">
+                            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/grilled-chicken-and-rice-salad-bowl-royalty-free-image-1571155844.jpg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/290194/7-day-vegan-meal-plan-1200-calories/">7-Day Vegan Meal Plan: 1,200 Calories</a></p>
+    
+                            <p class="foodname-shortdescription">Following a vegan diet, or even just including more plant-based foods in your routine, can be a healthy and delicious approach to eating . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/291744/gestational-diabetes-meal-plan-diet-guidelines/">Read More →</a></p>
+                        </td>
+    
+                        <td class="articles-cells">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F06%2F28034902%2Few_ravioli_mediterranean-960.jpg" class="articles-img" alt="food">
+    
+                            <p class="foodname"><a href="https://www.eatingwell.com/article/287731/7-day-diet-meal-plan-to-lose-weight-1800-calories/">1,800-Calorie Diet Plan for Weight Loss</a></p>
+    
+                            <p class="foodname-shortdescription">We've done the hard work of planning for you and mapped out seven full days of meals and snacks to help you lose weight while following an 1,800-calorie diet . . .</p>
+    
+                            <p class="see-more"><a href="https://www.eatingwell.com/article/287731/7-day-diet-meal-plan-to-lose-weight-1800-calories/">Read More →</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        <div class="footer">
+            <table>
+                <tr>
+                    <td style="width: 25%;"></td>                 
+                    <td style="width: 25%; vertical-align: top;">
+                        <p class="footer-headlines">FOLLOW ME:</p>
+
+                        <p class="footer-details">FACEBOOK: QwynTasty</p>
+
+                        <p class="footer-details">TWITTER: QwynTasty</p>
+
+                        <p class="footer-details">INSTAGRAM: qwyntasty</p>
+                    </td>
+
+                    <td style="width: 25%; vertical-align: top;">
+                        <p class="footer-headlines">CONTACT ME:</p>
+
+                        <p class="footer-details">TELEPHONE #: (234) 235-5678</p>
+
+                        <p class="footer-details">E-MAIL: qwyntasty@gmail.com.ph</p>
+
+                        <p class="footer-details">ADDRESS: Sgt. Esguerra Avenue cor Mother Ignacia Street, Diliman, Quezon City 1103 Philippines</p>
+                    </td>
+
+                    <td style="width: 25%;"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+                        <p class="footer-copyright">© 2021 QwynTasty. All Rights Reserved.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

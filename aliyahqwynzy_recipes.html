@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>QwynTasty | Recipes</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rye&family=Special+Elite&display=swap');
+        
+
+        #titlebanner {
+            width: 1440px;
+            height: 200px;
+            background-image: url(https://lh3.googleusercontent.com/7Xwa-rjHQTyO-yFril-VmFemTh5ogcRBmdId9Wrf64932rYw8tnxt7DCM7rR0c48c81aaKsj7yOqUM83-RIHAjfiLAUzXuR9ov8pD2lF-3n9Ft4aXpful-Cw2fEkgScpLsZJYmXpudYF2mF0HnZYXrEBtAUzDNUoWjnikBVrQogwa8Kd-7_t5u8Na5AJmBwKVxrWIrxEP9_ZUfVx1i6fGmosNVspgF5tZbLk2GxjZvTZUIiPkfegFuJYFi0OYIUIY4VkMFjrzHy60UR6A2b0ksK6g4liknUtu5aYyfWz16xqjGfNOOqInhUpw1IK55dTZofEV_BWyBpOUMBRZlV45W1W_d7JaDn_TRBeABags0W8NkbO0X_fBLK9dcAwLIn-AurJ-ANifH_OMhfjgD9UeyrXXb4XMpqi2Fs4uvlTML9tatDBCZUM6RDxTO5b3AzTyddlqVo6XgNkEFaAwy_cqdZmsTC406Ih6jQ8pZ-n5khvhUc36dEd1PPhqzWjQacui1TvxUKNxICDnqhkvdQ_XDOU-nRlmDry7jbBW6_6UMz9GcxhOGBICX6vnicGto2BxbJH7gl3UhtnUAzUqDGuioWZ4xMrjVC8D_bDbrpnD4ugxUbzGMlG7dlqf7MyUp3yWqkHKRT24H29CR77TLyZcVDgQhmiYVZeVLZyhqty5BL8sDS5rePdT78YrGn64Lh7tfUVyGbZ9Qn2L2qqF3YeoEx9=w1440-h200-no?authuser=0);
+            margin-left: -8px;
+            margin-top: -8px;
+            background-position: center;
+        }
+
+        .navbar {
+            margin-left: -8px;
+            background-color: #E8D5C4;
+            width: 1440px;
+        }
+
+        .navbarcell {
+            padding-left: 20px;
+        }
+
+        .navbar-content a {
+            font-family: 'Special Elite', cursive;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 20pt;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar-content a:hover {
+            text-decoration: underline;
+            color: #332B32;
+        }
+
+        #navbar-date {
+            text-align: right;
+            font-family: 'Special Elite', cursive;
+            padding-left: 20px;
+            padding-right: 30px;
+            font-size: 20pt;
+            color: black;
+            width: 560px;
+        }
+
+        .title {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 36pt;
+            color: black;
+            font-weight: bold;
+            vertical-align: top;
+            text-decoration: none;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 22pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-top: -50px;
+        }
+
+        .sections-title {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 28pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: bold;
+        }
+
+        .sections-subtitle {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 20pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-left: 30px;
+            margin-top: -35px;
+        }
+
+        .articles-table {
+            width: 1440px;
+            margin-left: -8px;
+        }
+
+        .articles-cells {
+            width: 710px;
+            padding-left: 30px;
+            padding-right: 30px;
+            vertical-align: top;
+        }
+
+        .articles-img {
+            width: 650px;
+            height: 250px;
+            object-fit: cover;
+            text-align: center;
+            border: 2px solid black
+        }
+
+        .foodname a {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 24pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+        }
+
+        .foodname a:hover {
+            text-decoration: underline;
+        }
+
+        .foodname-shortdescription {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14pt;
+            margin-top: -10px;
+        }
+
+        .see-more a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13pt;
+            float: right;
+            color: black;
+            text-decoration: none;
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+
+        .see-more a:hover {
+            font-weight: bold;
+        }
+
+        .footer {
+            width: 1440px;
+            height: 350px;
+            background-color: #332B32;
+            margin-left: -8px;
+        }
+
+        .footer-headlines {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 24pt;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .footer-details {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 16pt;
+            text-align: center;
+            vertical-align: top;
+            margin-top: -12px;
+        }
+
+        .footer-copyright {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 16pt;
+            text-align: center;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+
+        #recommendations {
+            background-color: #332B32;
+            padding-top: 5px;
+            padding-bottom: 20px;
+            width: 1432px;
+        }
+
+        .recommendation-title {
+            font-family: 'Special Elite', cursive;
+            font-size: 32pt;
+            color: white;
+            text-align: center;
+        }
+
+        .recommend-subtitle {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 19pt;
+            color: white;
+            vertical-align: top;
+            text-decoration: none;
+            margin-top: -40px;
+        }
+
+        .recommend-name a {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 24pt;
+            color: white;
+            vertical-align: top;
+            text-decoration: none;
+        }
+
+        .recommend-name a:hover {
+            text-decoration: underline;
+        }
+
+        .recommend-shortdescription {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14pt;
+            margin-top: -10px;
+            color: white;
+        }
+
+        .recommend-see-more a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13pt;
+            float: right;
+            color: white;
+            text-decoration: none;
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+
+        .recommend-see-more a:hover {
+            font-weight: bold;
+        }
+
+        .recommend-img {
+            width: 650px;
+            height: 250px;
+            object-fit: cover;
+            text-align: center;
+            border: 2px solid white;
+        }
+
+        .cheftips {
+            font-family: 'Special Elite', cursive;
+            font-size: 32pt;
+            text-align: center;
+        }
+
+        .tips-subtitle {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 19pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-top: -40px;
+        }
+
+        .tips-img {
+            width: 300px;
+            height: 250px;
+            object-fit: cover;
+            text-align: center;
+            border: 2px solid white;
+        }
+
+        .description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18pt;
+            margin-left: 30px;
+            text-align: center;
+        }
+        
+    </style>
+    </head>
+
+    <body style="width: 1440px; margin: 0px">
+        <div id="titlebanner"></div>
+        
+        <table class="navbar">
+            <tr>
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="index.html">HOME</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_recipes.html">RECIPES</a></p>
+                </td>
+ 
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_mealplans.html">MEAL PLANS</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_chefs.html">CHEFS</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_about.html">ABOUT</a></p>
+                </td>
+
+                <td id="navbar-date">
+                    <p>NOVEMBER | 2021</p>
+                </td>
+            </tr>
+        </table>
+
+        <div>
+            <p class="title">RECIPES</p>
+            <p class="subtitle">EFFORTLESSLY MAKE THE HARDEST DISHES<br>LEARNING 101</p>
+        </div>
+
+        <div class="description">
+            <p>Want to start learning how to cook? Want to expand your knowledge and skills in cooking? You have come at<br>the right place! Here are the recipes that you might like to cook. Just read the recipes and follow the steps <br>properly to cook what you want.</p>
+        </div>
+
+        <div>
+            <p class="sections-title">BREAKFAST & BRUNCH</p>
+            <p class="sections-subtitle">GET ENERGY FOR THE DAY AND BE PRODUCTIVE!</p>
+
+            <table class="articles-table">
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://static.onecms.io/wp-content/uploads/sites/9/2021/09/13/wild-mushroom-toast-FT-RECIPE0921.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/wild-mushroom-toasts">Wild Mushroom Toasts</a></p>
+
+                        <p class="foodname-shortdescription">For his wild mushroom toasts, chef Michael Reed starts with griddled sourdough bread, slathers it with homemade hollandaise sauce, tops it with sautéed mushrooms and spinach, and then crowns it with a mound of rich scrambled eggs. The end result is an impressive . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/wild-mushroom-toasts">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://i2.wp.com/completelydelicious.com/wp-content/uploads/2018/10/biscuits-sausage-gravy-3-660x880.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/buttermilk-biscuits-and-sausage-gravy">Buttermilk Biscuits and Sausage Gravy</a></p>
+
+                        <p class="foodname-shortdescription">To create biscuits with incredibly-distinctive flaky layers, chef Michael Reed adds very cold, thinly-sliced butter to the dry ingredients and folds the dough over several times. The accompanying gravy is packed with sausage and makes for a truly satisfying breakfast . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/buttermilk-biscuits-and-sausage-gravy">Read More →</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://static.onecms.io/wp-content/uploads/sites/9/2021/09/16/Keralan-Egg-Curry-FT-RECIPE1021.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/wild-mushroom-toasts">Keralan Egg Curry</a></p>
+
+                        <p class="foodname-shortdescription">Coconut milk, tomatoes, and onions add vegetal sweetness that rounds out the fruity piquancy of Kashmiri chile powder and Thai chiles in this warmly-spiced egg curry. It's South Indian dish that chef Margaret Pak of Thattu in Chicago, a 2020 Food & Wine Best New . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/keralan-egg-curry">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F07%2F21%2Ftofu-bhurji-FT-RECIPE0821.jpg&q=85" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/tofu-bhurji">Tofu Bhurji</a></p>
+
+                        <p class="foodname-shortdescription">Medium-firm tofu has just enough moisture to crumble into a scrambled egg–like texture in this breakfast dish inspired by Indian anda bhurji. Slightly pink in color, the kala namak (black salt) adds eggy, sulfurous flavors to this dish . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/tofu-bhurji">Read More →</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://static.onecms.io/wp-content/uploads/sites/9/2021/08/12/salmon-and-arugula-frittata-FT-RECIPE0821.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/salmon-and-arugula-frittata-with-pesto">Salmon and Arugula Frittata with Pesto</a></p>
+
+                        <p class="foodname-shortdescription">Chef Eric Adjepong uses salmon two ways in his pesto-infused frittata, topping the eggs with cooked fresh salmon before baking it, then garnishing the frittata with thinly-smoked salmon just before serving. Adjepong likes to serve the frittata with crisp greens drizzled with . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/salmon-and-arugula-frittata-with-pesto">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://static.onecms.io/wp-content/uploads/sites/9/2021/05/17/ros-omelette-FT-RECIPE0521.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/ros-omelet-with-tomato-gravy">Ros Omelet (Omelet with Tomato Gravy)</a></p>
+
+                        <p class="foodname-shortdescription">Upon disembarking from the train and entering the Vasco da Gama train station, the ros omelets prepared near the station entrance are too enticing to pass up. The aroma of the omelet begins to waft through the air from vendor stalls throughout Goa when the sun . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/ros-omelet-with-tomato-gravy">Read More →</a></p>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+
+            <p class="sections-title">DESSERTS</p>
+            <p class="sections-subtitle">NEVER GONNA RUN AROUND AND "DESSERT" YOU ~</p>
+
+            <table class="articles-table">
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F10%2F15%2Fbrandy-pecan-pie-FT-RECIPE1121.jpg&q=85" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/brandy-pecan-pie">Brandy Pecan Pie</a></p>
+
+                        <p class="foodname-shortdescription">A blend of turbinado sugar, maple syrup, and honey makes for a pecan pie with a well-rounded sweetness. A dash of apple brandy adds a faint caramel apple flavor and brightens the nutty toasted pecans . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/brandy-pecan-pie">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://static.onecms.io/wp-content/uploads/sites/9/2021/10/15/apple-cheddar-rye-pie-FT-RECIPE1121.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/apple-cheddar-rye-pie">Apple Cheddar Rye Pie</a></p>
+
+                        <p class="foodname-shortdescription">Nutty rye flour and sharp cheddar cheese enrich buttery pie crust in this sweet-and-savory twist on classic apple pie. Tapioca starch thickens the filling, while keeping it clear and glossy . . .<br><br></p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/apple-cheddar-rye-pie">Read More →</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F08%2F18%2Fchocolate-and-fig-cake-FT-RECIPE0921.jpg&q=85" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/chocolate-and-fig-cake">Chocolate and Fig Cake</a></p>
+
+                        <p class="foodname-shortdescription">The large range of figs called for in this fig cake recipe leaves the decoration and texture of this dense and fudgy chocolate dessert up to you: 4 ounces of figs creates two small rings around the cake, while the full 12 ounces of fruit will cover the entire top with a jammy . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/chocolate-and-fig-cake">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F05%2F17%2Fphilly-fluff-FT-RECIPE0621.jpg&q=85" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/philly-fluff-cake">Philly Fluff Cake</a></p>
+
+                        <p class="foodname-shortdescription">A Philly Fluff Cake, despite the name, is dense, moist, and tender, with rich swirls of bittersweet chocolate and a well-browned, sugary crisp exterior. It is more similar to a pound cake than a fluffy cake, and a generous portion of cream cheese in the batter lends the cake . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/philly-fluff-cake">Read More →</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F09%2F20%2Fsalted-tahini-shortbread-with-chocolate-swirl-FT-RECIPE0921.jpg&q=85" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/salted-tahini-chocolate-shortbread">Salted Tahini-Chocolate Shortbread</a></p>
+
+                        <p class="foodname-shortdescription">These buttery, nutty, salty shortbread cookies have enough structure to hold together when you pick them up, but when you take a bite, they are meltingly tender. The salt compliments the tanginess of the chocolate, and brings out the nuttiness from the tahini. Marbling . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/salted-tahini-chocolate-shortbread">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://static.onecms.io/wp-content/uploads/sites/9/2021/07/14/Double-Rye-Chocolate-Chip-Cookies-FT-Recipe-0821.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/double-chocolate-rye-cookies">Double-Chocolate Rye Cookies</a></p>
+
+                        <p class="foodname-shortdescription">A mix of unsweetened cocoa and bittersweet chocolate bars gives these fudgy cookies a deep chocolate flavor. Dark rye flour adds a lightly savory note that balances the sweet intensity of dark chocolate well and plays off the crunchy sea salt garnish. The addition of . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/double-chocolate-rye-cookies">Read More →</a></p>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+
+            <p class="sections-title">SOUP RECIPES</p>
+            <p class="sections-subtitle">BEST EATEN DURING COLD RAINY DAYS</p>
+
+            <table class="articles-table">
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F10%2F15%2Fbrandy-pecan-pie-FT-RECIPE1121.jpg&q=85" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/smoked-ham-hock-and-lentil-soup">Smoked Ham Hock and Lentil Soup</a></p>
+
+                        <p class="foodname-shortdescription">"I love making this lentil soup when the weather begins to cool," says 2017 Food & Wine Best New Chef Nina Compton, chef-owner of New Orleans hot spot Compère Lapin. "The ham-hock aroma hangs around the kitchen beautifully; the smell alone makes you warmer. Adding . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/smoked-ham-hock-and-lentil-soup">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F07%2F14%2FKachumber-Gazpacho-FT-Recipe-0821.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/kachumber-gazpacho">Kachumber Gazpacho</a></p>
+
+                        <p class="foodname-shortdescription">Nutty rye flour and sharp cheddar cheese enrich buttery pie crust in this sweet-and-savory twist on classic apple pie. Tapioca starch thickens the filling, while keeping it clear and glossy . . .<br><br></p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/kachumber-gazpacho">Read More →</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://healthyfitnessmeals.com/wp-content/uploads/2019/09/4-bean-white-chicken-chili-7.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/white-chicken-chili">White Chicken Chili</a></p>
+
+                        <p class="foodname-shortdescription">This creamy, spicy, and boldly-flavored White Chicken Chili cooks in one pot in under an hour. It gets its luscious texture from creamy navy beans and chopped corn tortillas, which thicken the broth and give it a long-cooked flavor. A lightly piquant combination of fresh . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/white-chicken-chili">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://static.onecms.io/wp-content/uploads/sites/9/2020/01/everybody-soup-FT-RECIPE0120.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/soup/cream-soup/potato-and-leek-soup/potato-leek-soup-recipes">Potato-Leek Soup</a></p>
+
+                        <p class="foodname-shortdescription">Potato and leek soup is a classic, typically made with just potatoes, leeks, chicken broth and heavy cream. This Americanized soup is a version of a French dish called Vichyssoise, made with the same ingredients but typically eaten chilled. Andrew Zimmern puts a . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/soup/cream-soup/potato-and-leek-soup/potato-leek-soup-recipes">Read More →</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://static01.nyt.com/images/2015/02/25/dining/25APPETITE1/25APPETITE1-articleLarge.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/black-bean-and-chorizo-soup">Black Bean and Chorizo Soup</a></p>
+
+                        <p class="foodname-shortdescription">Kathy Gunst’s cookbook Soup Swap is filled with dishes like this hearty black bean soup studded with crispy chorizo that will quickly find a place in your recipe rotation. This soup is easy to double and the perfect make-ahead: Freeze in individual portions and pull out . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/black-bean-and-chorizo-soup">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1600&h=800&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2018%2F05%2F31%2Fshrimp-and-yuca-dumplings-soup-ft-RECIPE0718.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/shrimp-and-yuca-dumplings-soup">Shrimp-and-Yuca Dumplings Soup</a></p>
+
+                        <p class="foodname-shortdescription">Lil Deb’s Oasis’ Hannah Black and Carla Perez-Gallardo developed this recipe in the style of Italian wedding soup, with meatballs and cooked greens in a savory broth. Their tropical version, made with collard greens and tender shrimp-and-yuca meatballs, is light but . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/shrimp-and-yuca-dumplings-soup">Read More →</a></p>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+
+            <p class="sections-title">PASTA AND NOODLES</p>
+            <p class="sections-subtitle">SAVORY, CHEWY, AND TASTY</p>
+
+            <table class="articles-table">
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F06%2F21%2Fyuzu-chilled-noodle-salad-FT-RECIPE0621.jpg&q=85" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/chilled-soba-noodle-salad-with-yuzu-dressing">Chilled Soba Noodle Salad with Yuzu Dressing</a></p>
+
+                        <p class="foodname-shortdescription">As the summer approaches, I like to turn to lighter refreshing vinaigrettes to dress noodles and salads. Using the ready-made jams and marmalades found in Asian supermarkets, we can build a huge variety of dressings for chilled noodles that pair excellently with . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/chilled-soba-noodle-salad-with-yuzu-dressing">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F04%2F20%2Flife-changing-udon-with-soft-boiled-egg-hot-soy-black-pepper-FT-RECIPE0521.jpg&q=85" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/life-changing-udon-with-soft-boiled-egg-hot-soy-and-black-pepper">Udon with Soft-Boiled Egg, Hot Soy, and Black Pepper</a></p>
+
+                        <p class="foodname-shortdescription">Butter, egg yolk, and starch enrich the soy broth, dressing chewy udon noodles in a silky sauce inspired by Hetty McKinnon's visit to Udon Shin, a restaurant in Tokyo's bustling Shinjuku ward. Sharp black pepper and scallions break up its deeply savory edge with light . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/life-changing-udon-with-soft-boiled-egg-hot-soy-and-black-pepper">Read More →</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="articles-cells">
+                        <img src="http://www.italianfoodforever.com/wp-content/uploads/2018/02/ndujacarbonara5.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/calabrian-carbonara">Calabrian Carbonara</a></p>
+
+                        <p class="foodname-shortdescription">New York City chef Andrew Carmellini uses Calabrian 'nduja, the spicy, spreadable sausage, to bring loads of delicious heat and flavor to his silky carbonara . . .<br><br></p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/calabrian-carbonara">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1600&h=800&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2018%2F12%2Ffettuccine-with-white-chicken-ragu-ft-RECIPE0119.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/fettuccine-white-chicken-ragu">Fettuccine with White Chicken Ragù</a></p>
+
+                        <p class="foodname-shortdescription">This creamy chicken ragù is easy to make and boasts remarkable depth thanks to the flavors of an Italian-style sofrito made with onions, carrots, celery, and parsley. . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/fettuccine-white-chicken-ragu">Read More →</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://static.onecms.io/wp-content/uploads/sites/9/2017/04/07/linguine-al-pesto-zucchine-XL-RECIPE2017.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/linguine-al-pesto-di-zucchine">Linguine Al Pesto Di Zucchine</a></p>
+
+                        <p class="foodname-shortdescription">This dish incorporates two regional specialties: zucchini and olive oil. According to the book, “Irpinia, in the region of Avellino, is known for its olive and olive oil production, due to its ideal terroir: rich, fertile volcanic soil and a cooler climate as a result of . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/recipes/linguine-al-pesto-di-zucchine">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2020%2F06%2F24%2Fthree-cheese-lasagna-with-roasted-red-peppers-and-mushrooms-1.jpg" class="articles-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/recipes/three-cheese-lasagna-roasted-red-peppers-and-mushrooms">Three-Cheese Lasagna with Roasted Red Peppers and Mushrooms</a></p>
+
+                        <p class="foodname-shortdescription">To create a vegetarian lasagna that’s packed with flavor (rather than watery and bland), start by roasting mushrooms and red peppers with a quick garlic-infused oil. While the vegetables are cooking, stir . . .</p>
+
+                        <p class="recommend-see-more"><a href="https://www.foodandwine.com/recipes/three-cheese-lasagna-roasted-red-peppers-and-mushrooms">Read More →</a></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="recommendations">
+            <p class="recommendation-title">RECOMMENDATIONS!</p>
+            <p class="recommend-subtitle">SOME OF THE BEST FILIPINO DISHES</p>
+            
+            <table class="articles-table">
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://panlasangpinoy.com/wp-content/uploads/2009/11/siningang-na-hipon.jpg" class="recommend-img" alt="food">
+
+                        <p class="recommend-name"><a href="https://panlasangpinoy.com/filipino-food-sour-shrimp-soup-sinigang-na-hipon-recipe/">1) Sinigang na Hipon</a></p>
+
+                        <p class="recommend-shortdescription">Sinigang na Hipon is a type of Filipino sour soup, wherein shrimp is used as the main ingredient. This dish also includes a variety of vegetables such as daikon radish, snake beans, okra, and eggplant. This dish is best served during cold weather. It is best enjoyed hot with a cup of white rice . . .</p>
+
+                        <p class="recommend-see-more"><a href="https://panlasangpinoy.com/filipino-food-sour-shrimp-soup-sinigang-na-hipon-recipe/">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://panlasangpinoy.com/wp-content/uploads/2019/03/Monggo-with-Dilis-Recipe-Panlasang-Pinoy-500x485.jpg" class="recommend-img" alt="food">
+
+                        <p class="recommend-name"><a href="https://panlasangpinoy.com/ginisang-munggo-sauteed-mung-beans/">2) Ginisang Munggo</a></p>
+
+                        <p class="recommend-shortdescription">Some dishes in a certain cuisine are known to best describe the feeling of home-cooked meals from that particular country. For the Philippines, it can range from sinigang to fried bangus to longganisa. But Ginisang Munggo is perhaps one of the best standout dishes that can definitely bring to you the comfort of a Filipino home . . .</p>
+
+                        <p class="recommend-see-more"><a href="https://panlasangpinoy.com/ginisang-munggo-sauteed-mung-beans/">Read More →</a></p>
+                    </td>
+                </tr>
+            </table>  
+            
+            <table class="articles-table">
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://balaycucina.com/wp-content/uploads/2020/05/Ginataang-Salmon2.jpg" class="recommend-img" alt="food">
+
+                        <p class="recommend-name"><a href="https://panlasangpinoy.com/ginataang-salmon-sa-gata-recipe-salmon-in-coconut-milk_knr_mm/">3) Ginataang Isda</a></p>
+
+                        <p class="recommend-shortdescription">Ginataang Salmon or Salmon sa Gata is a type of Filipino fish stew wherein salmon is used the main ingredient. The process involves stewing salmon in coconut milk mixture. Green leafy vegetables such as spinach can be added towards the end of the cooking process . . .</p>
+
+                        <p class="recommend-see-more"><a href="https://panlasangpinoy.com/ginataang-salmon-sa-gata-recipe-salmon-in-coconut-milk_knr_mm/">Read More →</a></p>
+                    </td>
+
+                    <td style="width: 500px; color: cyan;"></td>
+
+                    <td class="articles-cells">
+                        <img src="https://recipetineats.com/wp-content/uploads/2015/02/Filipino-Chicken-Adobo_6.jpg" class="recommend-img" alt="food">
+
+                        <p class="recommend-name"><a href="https://panlasangpinoy.com/filipino-chicken-adobo-recipe/">4) Filipino Chicken Adobo</a></p>
+
+                        <p class="recommend-shortdescription">Chicken Adobo is a type of Filipino chicken stew. Chicken pieces are marinated in soy sauce and spices, pan-fried, and stewed until tender. The dish gained popularity because of its delicious taste and ease in preparation . . .<br><br></p>
+
+                        <p class="recommend-see-more"><a href="https://panlasangpinoy.com/filipino-chicken-adobo-recipe/">Read More →</a></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tips">
+            <p class="cheftips">CHEFY TIPS AND TECHNIQUES!</p>
+            <p class="tips-subtitle">THINGS TO DO IN THE KITCHEN</p>
+
+            <table class="articles-table">
+                <tr>
+                    <td class="articles-cells">
+                        <img src="https://www.thespruceeats.com/thmb/hZGVHOxkCv-jhaTBvOWQ6eZOi9Q=/2229x1672/smart/filters:no_upscale()/perfectgreensalad2500-5993ab28c412440011db26df.jpg" class="tips-img" alt="FOOD">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/salads/how-to-build-green-salad">How to Build the Perfect Green Salad?</a></p>
+
+                        <p class="foodname-shortdescription">A classic green salad—one featuring crisp lettuces and raw seasonal vegetables tossed with a barely-there vinaigrette—elevates any meal. The trick to serving a properly dressed, not wilting salad is in the technique you use to build it, starting with the dressing . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/salads/how-to-build-green-salad">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F05%2F25%2Fhow-to-make-crispy-granola-FT-BLOG0521.jpg&q=85" class="tips-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/cooking-techniques/an-easy-trick-for-crispier-granola">An Easy Trick for Crispier Granola</a></p>
+
+                        <p class="foodname-shortdescription">Homemade granola is one of those things that I am constantly rediscovering. It's not revolutionary, but I will go months without making it and then suddenly remember how tasty and delicious it is to have your own supply of homemade granola . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/cooking-techniques/an-easy-trick-for-crispier-granola">Read More →</a></p>
+                    </td>
+                
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2020%2F05%2F28%2Fhow-to-clean-up-after-bread-dough-FT-BLOG0520.jpg" class="tips-img" alt="FOOD">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/cooking-techniques/baking/how-to-clean-up-dough-after-baking">How to Clean Up Dough</a></p>
+
+                        <p class="foodname-shortdescription">If you, like many folks, have gotten into the habit of baking during these past few endless-feeding months of self-isolation, you’ve probably hit upon a sad and sorry truth: Bread dough is a pain to clean up. Every time I feed my sourdough starter . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/cooking-techniques/baking/how-to-clean-up-dough-after-baking">Read More →</a></p>
+                    </td>
+
+                    <td class="articles-cells">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2017%2F07%2Fvideo-mgt-portion-meat-2000.jpg" class="tips-img" alt="food">
+
+                        <p class="foodname"><a href="https://www.foodandwine.com/cooking-techniques/barbeque/make-burger-patties-easy-hack">How to Make Patties With Clean Hands</a></p>
+
+                        <p class="foodname-shortdescription">Dealing with frozen hamburger meat is unpleasant stuff. Just picture it: an impenetrable lump that never seems to fully defrost, no matter how hard you try. You put it in the fridge, run water over it, hack at it with an icepick—all to no avail. It happens every grilling season . . .</p>
+
+                        <p class="see-more"><a href="https://www.foodandwine.com/cooking-techniques/barbeque/make-burger-patties-easy-hack">Read More →</a></p>
+                    </td>
+                </tr>
+            </table>                
+        </div>
+
+        <div class="footer">
+            <table>
+                <tr>
+                    <td style="width: 25%;"></td>                 
+                    <td style="width: 25%; vertical-align: top;">
+                        <p class="footer-headlines">FOLLOW ME:</p>
+
+                        <p class="footer-details">FACEBOOK: QwynTasty</p>
+
+                        <p class="footer-details">TWITTER: QwynTasty</p>
+
+                        <p class="footer-details">INSTAGRAM: qwyntasty</p>
+                    </td>
+
+                    <td style="width: 25%; vertical-align: top;">
+                        <p class="footer-headlines">CONTACT ME:</p>
+
+                        <p class="footer-details">TELEPHONE #: (234) 235-5678</p>
+
+                        <p class="footer-details">E-MAIL: qwyntasty@gmail.com.ph</p>
+
+                        <p class="footer-details">ADDRESS: Sgt. Esguerra Avenue cor Mother Ignacia Street, Diliman, Quezon City 1103 Philippines</p>
+                    </td>
+
+                    <td style="width: 25%;"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+                        <p class="footer-copyright">© 2021 QwynTasty. All Rights Reserved.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
