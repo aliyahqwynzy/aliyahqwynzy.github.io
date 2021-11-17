@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>QwynTasty | Meal Plans</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rye&family=Special+Elite&display=swap');
+        
+
+        #titlebanner {
+            width: 1440px;
+            height: 200px;
+            background-image: url(https://lh3.googleusercontent.com/7Xwa-rjHQTyO-yFril-VmFemTh5ogcRBmdId9Wrf64932rYw8tnxt7DCM7rR0c48c81aaKsj7yOqUM83-RIHAjfiLAUzXuR9ov8pD2lF-3n9Ft4aXpful-Cw2fEkgScpLsZJYmXpudYF2mF0HnZYXrEBtAUzDNUoWjnikBVrQogwa8Kd-7_t5u8Na5AJmBwKVxrWIrxEP9_ZUfVx1i6fGmosNVspgF5tZbLk2GxjZvTZUIiPkfegFuJYFi0OYIUIY4VkMFjrzHy60UR6A2b0ksK6g4liknUtu5aYyfWz16xqjGfNOOqInhUpw1IK55dTZofEV_BWyBpOUMBRZlV45W1W_d7JaDn_TRBeABags0W8NkbO0X_fBLK9dcAwLIn-AurJ-ANifH_OMhfjgD9UeyrXXb4XMpqi2Fs4uvlTML9tatDBCZUM6RDxTO5b3AzTyddlqVo6XgNkEFaAwy_cqdZmsTC406Ih6jQ8pZ-n5khvhUc36dEd1PPhqzWjQacui1TvxUKNxICDnqhkvdQ_XDOU-nRlmDry7jbBW6_6UMz9GcxhOGBICX6vnicGto2BxbJH7gl3UhtnUAzUqDGuioWZ4xMrjVC8D_bDbrpnD4ugxUbzGMlG7dlqf7MyUp3yWqkHKRT24H29CR77TLyZcVDgQhmiYVZeVLZyhqty5BL8sDS5rePdT78YrGn64Lh7tfUVyGbZ9Qn2L2qqF3YeoEx9=w1440-h200-no?authuser=0);
+            margin-left: -8px;
+            margin-top: -8px;
+            background-position: center;
+        }
+
+        .navbar {
+            margin-left: -8px;
+            background-color: #E8D5C4;
+            width: 1440px;
+        }
+
+        .navbarcell {
+            padding-left: 20px;
+        }
+
+        .navbar-content a {
+            font-family: 'Special Elite', cursive;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 20pt;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar-content a:hover {
+            text-decoration: underline;
+            color: #332B32;
+        }
+
+        #navbar-date {
+            text-align: right;
+            font-family: 'Special Elite', cursive;
+            padding-left: 20px;
+            padding-right: 30px;
+            font-size: 20pt;
+            color: black;
+            width: 560px;
+        }
+
+        .title {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 36pt;
+            color: black;
+            font-weight: bold;
+            vertical-align: top;
+            text-decoration: none;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 22pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-top: -50px;
+        }
+
+        .sections-title {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 28pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: bold;
+        }
+
+        .sections-subtitle {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 20pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-left: 30px;
+            margin-top: -35px;
+        }
+
+        .articles-table {
+            width: 1440px;
+            margin-left: -8px;
+        }
+
+        .articles-cells {
+            width: 400px;
+            padding-left: 30px;
+            padding-right: 30px;
+            vertical-align: top;
+        }
+
+        .articles-img {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            text-align: center;
+            border: 2px solid black
+        }
+
+        .foodname a {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 24pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+        }
+
+        .foodname a:hover {
+            text-decoration: underline;
+        }
+
+        .foodname-shortdescription {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14pt;
+            margin-top: -10px;
+        }
+
+        .see-more a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13pt;
+            float: right;
+            color: black;
+            text-decoration: none;
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+
+        .see-more a:hover {
+            font-weight: bold;
+        }
+
+        .footer {
+            width: 1440px;
+            height: 350px;
+            background-color: #332B32;
+            margin-left: -8px;
+        }
+
+        .footer-headlines {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 24pt;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .footer-details {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 16pt;
+            text-align: center;
+            vertical-align: top;
+            margin-top: -12px;
+        }
+
+        .footer-copyright {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 16pt;
+            text-align: center;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+
+        .links a {
+            font-size: 10pt;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            color: black;
+            
+        }
+
+        .links a:hover {
+            font-weight: bold;
+        }
+    </style>
+    </head>
+
+    <body style="width: 1440px; margin: 0px">
+        <div id="titlebanner"></div>
+        
+        <table class="navbar">
+            <tr>
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="index.html">HOME</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_recipes.html">RECIPES</a></p>
+                </td>
+ 
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_mealplans.html">MEAL PLANS</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_chefs.html">CHEFS</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_about.html">ABOUT</a></p>
+                </td>
+
+                <td id="navbar-date">
+                    <p>NOVEMBER | 2021</p>
+                </td>
+            </tr>
+        </table>
+
+        <div>
+            <p class="title">REFERENCES</p>
+            <p class="subtitle">ARTICLES | IMAGES | VIDEOS</p>
+        </div>
+
+        
+        <table style="padding-left: 30px; padding-right: 30px; margin-top: 0px; width: 1440px; table-layout: fixed;">
+       
+            <tr>
+                <td style="width: 400px; overflow-x: scroll; height: 400px; overflow-y: hidden;">
+                    <p style="font-family: 'Special Elite', cursive; font-size: 16pt;">Images:</p>
+        
+                    <p class="links"><a href="https://www.panaynews.net/wp-content/uploads/2018/12/Lechon.jpg">https://www.panaynews.net/wp-content/uploads/2018/12/Lechon.jpg</a></p>
+        
+                    <p class="links"><a href="hhttps://photos.app.goo.gl/x7xb7iJhc39riGtc7">https://photos.app.goo.gl/x7xb7iJhc39riGtc7</a></p>
+        
+        
+                    <p class="links"><a href="https://photos.app.goo.gl/kSvoKZCJmdqs8Jyf6">https://photos.app.goo.gl/kSvoKZCJmdqs8Jyf6</a></p>
+        
+                    <p class="links"><a href="https://static.onecms.io/wp-content/uploads/sites/44/2019/08/26232432/6908449.jpg">https://static.onecms.io/wp-content/uploads/sites/44/2019/08/26232432/6908449.jpg</a></p>
+        
+                    <p class="links"><a href="https://www.eatingwell.com/article/7797768/how-to-meal-prep-healthy-snacks-to-satisfy-any-craving/">https://www.eatingwell.com/article/7797768/how-to-meal-prep-healthy-snacks-to-satisfy-any-craving/</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1244&h=622&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F06%2F04%2FGrilled-Salmon-with-Sweet-Peppers.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1244&h=622&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F06%2F04%2FGrilled-Salmon-with-Sweet-Peppers.jpg</a></p>
+        
+                    <p class="links"><a href="https://www.eatingwell.com/article/7894307/simple-30-day-weight-loss-meal-plan-for-summer/">hhttps://www.eatingwell.com/article/7894307/simple-30-day-weight-loss-meal-plan-for-summer/</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1244&h=622&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F06%2F04%2FGrilled-Salmon-with-Sweet-Peppers.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1244&h=622&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F06%2F04%2FGrilled-Salmon-with-Sweet-Peppers.jpg</a></p>
+        
+                    <p class="links"><a href="https://static.onecms.io/wp-content/uploads/sites/9/2021/09/13/wild-mushroom-toast-FT-RECIPE0921.jpg">https://static.onecms.io/wp-content/uploads/sites/9/2021/09/13/wild-mushroom-toast-FT-RECIPE0921.jpg</a></p>
+        
+                    <p class="links"><a href="https://i2.wp.com/completelydelicious.com/wp-content/uploads/2018/10/biscuits-sausage-gravy-3-660x880.jpg">https://i2.wp.com/completelydelicious.com/wp-content/uploads/2018/10/biscuits-sausage-gravy-3-660x880.jpg</a></p>
+        
+                    <p class="links"><a href="https://static.onecms.io/wp-content/uploads/sites/9/2021/09/16/Keralan-Egg-Curry-FT-RECIPE1021.jpg">https://static.onecms.io/wp-content/uploads/sites/9/2021/09/16/Keralan-Egg-Curry-FT-RECIPE1021.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F07%2F21%2Ftofu-bhurji-FT-RECIPE0821.jpg&q=85">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F07%2F21%2Ftofu-bhurji-FT-RECIPE0821.jpg&q=85</a></p>
+        
+                    <p class="links"><a href="https://static.onecms.io/wp-content/uploads/sites/9/2021/08/12/salmon-and-arugula-frittata-FT-RECIPE0821.jpg">https://static.onecms.io/wp-content/uploads/sites/9/2021/08/12/salmon-and-arugula-frittata-FT-RECIPE0821.jpg</a></p>
+        
+                    <p class="links"><a href="https://static.onecms.io/wp-content/uploads/sites/9/2021/05/17/ros-omelette-FT-RECIPE0521.jpg">https://static.onecms.io/wp-content/uploads/sites/9/2021/05/17/ros-omelette-FT-RECIPE0521.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F10%2F15%2Fbrandy-pecan-pie-FT-RECIPE1121.jpg&q=85">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F10%2F15%2Fbrandy-pecan-pie-FT-RECIPE1121.jpg&q=85</a></p>
+        
+                    <p class="links"><a href="https://static.onecms.io/wp-content/uploads/sites/9/2021/10/15/apple-cheddar-rye-pie-FT-RECIPE1121.jpg">https://static.onecms.io/wp-content/uploads/sites/9/2021/10/15/apple-cheddar-rye-pie-FT-RECIPE1121.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F08%2F18%2Fchocolate-and-fig-cake-FT-RECIPE0921.jpg&q=85">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F08%2F18%2Fchocolate-and-fig-cake-FT-RECIPE0921.jpg&q=85</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F05%2F17%2Fphilly-fluff-FT-RECIPE0621.jpg&q=85">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F05%2F17%2Fphilly-fluff-FT-RECIPE0621.jpg&q=85</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F09%2F20%2Fsalted-tahini-shortbread-with-chocolate-swirl-FT-RECIPE0921.jpg&q=85">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F09%2F20%2Fsalted-tahini-shortbread-with-chocolate-swirl-FT-RECIPE0921.jpg&q=85</a></p>
+        
+                    <p class="links"><a href="https://static.onecms.io/wp-content/uploads/sites/9/2021/07/14/Double-Rye-Chocolate-Chip-Cookies-FT-Recipe-0821.jpg">https://static.onecms.io/wp-content/uploads/sites/9/2021/07/14/Double-Rye-Chocolate-Chip-Cookies-FT-Recipe-0821.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F10%2F15%2Fbrandy-pecan-pie-FT-RECIPE1121.jpg&q=85">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F10%2F15%2Fbrandy-pecan-pie-FT-RECIPE1121.jpg&q=85</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F07%2F14%2FKachumber-Gazpacho-FT-Recipe-0821.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F07%2F14%2FKachumber-Gazpacho-FT-Recipe-0821.jpg</a></p>
+        
+                    <p class="links"><a href="https://healthyfitnessmeals.com/wp-content/uploads/2019/09/4-bean-white-chicken-chili-7.jpg">https://healthyfitnessmeals.com/wp-content/uploads/2019/09/4-bean-white-chicken-chili-7.jpg</a></p>
+        
+                    <p class="links"><a href="https://static.onecms.io/wp-content/uploads/sites/9/2020/01/everybody-soup-FT-RECIPE0120.jpg">https://static.onecms.io/wp-content/uploads/sites/9/2020/01/everybody-soup-FT-RECIPE0120.jpg</a></p>
+        
+                    <p class="links"><a href="https://static01.nyt.com/images/2015/02/25/dining/25APPETITE1/25APPETITE1-articleLarge.jpg">https://static01.nyt.com/images/2015/02/25/dining/25APPETITE1/25APPETITE1-articleLarge.jpg</a></p>
+        
+                    <p class="links"><a href="hhttps://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1600&h=800&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2018%2F05%2F31%2Fshrimp-and-yuca-dumplings-soup-ft-RECIPE0718.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1600&h=800&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2018%2F05%2F31%2Fshrimp-and-yuca-dumplings-soup-ft-RECIPE0718.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F06%2F21%2Fyuzu-chilled-noodle-salad-FT-RECIPE0621.jpg&q=85">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F06%2F21%2Fyuzu-chilled-noodle-salad-FT-RECIPE0621.jpg&q=85</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F04%2F20%2Flife-changing-udon-with-soft-boiled-egg-hot-soy-black-pepper-FT-RECIPE0521.jpg&q=85">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F04%2F20%2Flife-changing-udon-with-soft-boiled-egg-hot-soy-black-pepper-FT-RECIPE0521.jpg&q=85</a></p>
+        
+                    <p class="links"><a href="http://www.italianfoodforever.com/wp-content/uploads/2018/02/ndujacarbonara5.jpg">http://www.italianfoodforever.com/wp-content/uploads/2018/02/ndujacarbonara5.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1600&h=800&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2018%2F12%2Ffettuccine-with-white-chicken-ragu-ft-RECIPE0119.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1600&h=800&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2018%2F12%2Ffettuccine-with-white-chicken-ragu-ft-RECIPE0119.jpg</a></p>
+        
+                    <p class="links"><a href="https://static.onecms.io/wp-content/uploads/sites/9/2017/04/07/linguine-al-pesto-zucchine-XL-RECIPE2017.jpg">https://static.onecms.io/wp-content/uploads/sites/9/2017/04/07/linguine-al-pesto-zucchine-XL-RECIPE2017.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2020%2F06%2F24%2Fthree-cheese-lasagna-with-roasted-red-peppers-and-mushrooms-1.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2020%2F06%2F24%2Fthree-cheese-lasagna-with-roasted-red-peppers-and-mushrooms-1.jpg</a></p>
+        
+                    <p class="links"><a href="https://panlasangpinoy.com/wp-content/uploads/2009/11/siningang-na-hipon.jpg">https://panlasangpinoy.com/wp-content/uploads/2009/11/siningang-na-hipon.jpg</a></p>
+        
+                    <p class="links"><a href="https://panlasangpinoy.com/wp-content/uploads/2019/03/Monggo-with-Dilis-Recipe-Panlasang-Pinoy-500x485.jpg">https://panlasangpinoy.com/wp-content/uploads/2019/03/Monggo-with-Dilis-Recipe-Panlasang-Pinoy-500x485.jpg</a></p>
+        
+                    <p class="links"><a href="https://panlasangpinoy.com/wp-content/uploads/2019/03/ginataang-tilapia-recipe.jpg">https://panlasangpinoy.com/wp-content/uploads/2019/03/ginataang-tilapia-recipe.jpg</a></p>
+        
+                    <p class="links"><a href="https://recipetineats.com/wp-content/uploads/2015/02/Filipino-Chicken-Adobo_6.jpg">https://recipetineats.com/wp-content/uploads/2015/02/Filipino-Chicken-Adobo_6.jpg</a></p>
+        
+                    <p class="links"><a href="https://www.thespruceeats.com/thmb/hZGVHOxkCv-jhaTBvOWQ6eZOi9Q=/2229x1672/smart/filters:no_upscale()/perfectgreensalad2500-5993ab28c412440011db26df.jpg">https://www.thespruceeats.com/thmb/hZGVHOxkCv-jhaTBvOWQ6eZOi9Q=/2229x1672/smart/filters:no_upscale()/perfectgreensalad2500-5993ab28c412440011db26df.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F05%2F25%2Fhow-to-make-crispy-granola-FT-BLOG0521.jpg&q=85">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F05%2F25%2Fhow-to-make-crispy-granola-FT-BLOG0521.jpg&q=85</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F05%2F25%2Fhow-to-make-crispy-granola-FT-BLOG0521.jpg&q=85">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F05%2F25%2Fhow-to-make-crispy-granola-FT-BLOG0521.jpg&q=85</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2020%2F05%2F28%2Fhow-to-clean-up-after-bread-dough-FT-BLOG0520.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2020%2F05%2F28%2Fhow-to-clean-up-after-bread-dough-FT-BLOG0520.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2017%2F07%2Fvideo-mgt-portion-meat-2000.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2017%2F07%2Fvideo-mgt-portion-meat-2000.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://cf-images.us-east-1.prod.boltdns.net/v1/static/5118192885001/d54b9207-df56-4869-a06f-3abc97357d52/18be823a-2c5a-4a16-8900-fdf80dd55070/1280x720/match/image.jpg&w=1280&h=720&q=90&c=cc">https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://cf-images.us-east-1.prod.boltdns.net/v1/static/5118192885001/d54b9207-df56-4869-a06f-3abc97357d52/18be823a-2c5a-4a16-8900-fdf80dd55070/1280x720/match/image.jpg&w=1280&h=720&q=90&c=cc</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F12%2F31%2FStuffed-Sweet-Potato-with-Hummus-Dressing.jpeg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F12%2F31%2FStuffed-Sweet-Potato-with-Hummus-Dressing.jpeg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2018%2F11%2F27122258%2FChickPeas-960x960.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2018%2F11%2F27122258%2FChickPeas-960x960.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F08%2F18%2Fchicken-hummus-bowls.jpeg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F08%2F18%2Fchicken-hummus-bowls.jpeg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F12%2F31%2FStuffed-Sweet-Potato-with-Hummus-Dressing.jpeg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F12%2F31%2FStuffed-Sweet-Potato-with-Hummus-Dressing.jpeg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F12%2F11%2FGrilled-Fennel-Rubbed-Pork-Chops-Apricots.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F12%2F11%2FGrilled-Fennel-Rubbed-Pork-Chops-Apricots.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F08%2F19%2Fwhite-bean-and-sun-dried-tomato-gnocchi.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F08%2F19%2Fwhite-bean-and-sun-dried-tomato-gnocchi.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F01%2F08%2Fpesto-chicken-bake.jpeg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F01%2F08%2Fpesto-chicken-bake.jpeg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F02%2FRoasted-Salmon-Caprese.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F02%2FRoasted-Salmon-Caprese.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2014%2F01%2F27194822%2F3755556.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2014%2F01%2F27194822%2F3755556.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://cf-images.us-east-1.prod.boltdns.net/v1/static/5118192885001/46ded4cb-01e8-456f-9f6c-97c908ac0623/78281735-44b3-4bec-a487-583c6492bf82/1280x720/match/image.jpg&w=1280&h=720&q=90&c=cc">https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://cf-images.us-east-1.prod.boltdns.net/v1/static/5118192885001/46ded4cb-01e8-456f-9f6c-97c908ac0623/78281735-44b3-4bec-a487-583c6492bf82/1280x720/match/image.jpg&w=1280&h=720&q=90&c=cc</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F12%2F11%2FGrilled-Fennel-Rubbed-Pork-Chops-Apricots.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F12%2F11%2FGrilled-Fennel-Rubbed-Pork-Chops-Apricots.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F03%2F31%2FSkillet-Lemon-Chicken-Potatoes-with-Kale.jpeg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F03%2F31%2FSkillet-Lemon-Chicken-Potatoes-with-Kale.jpeg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F05%2F27200257%2Fsimple-grilled-salmon-broccolini-rice.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F05%2F27200257%2Fsimple-grilled-salmon-broccolini-rice.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26230709%2F4582294.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26230709%2F4582294.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2017%2F11%2F27114255%2F45014761.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2017%2F11%2F27114255%2F45014761.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F05%2F27200257%2Fsimple-grilled-salmon-broccolini-rice.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F05%2F27200257%2Fsimple-grilled-salmon-broccolini-rice.jpg</a></p>
+        
+                    <p class="links"><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F06%2F28034902%2Few_ravioli_mediterranean-960.jpg">https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F06%2F28034902%2Few_ravioli_mediterranean-960.jpg</a></p>
+        
+                    <p class="links"><a href="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ed53f23da1f770006140c3c%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D1567%26cropX2%3D3494%26cropY1%3D155%26cropY2%3D2083">https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ed53f23da1f770006140c3c%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D1567%26cropX2%3D3494%26cropY1%3D155%26cropY2%3D2083</a></p>
+        
+                    <p class="links"><a href="https://ca-times.brightspotcdn.com/dims4/default/daae540/2147483647/strip/true/crop/1365x2048+0+0/resize/840x1260!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0f%2Fe8%2F747281e24ae3f6318dcf54b38e3e%2Fla-ar-cutthroat-kitchens-alton-brown-branches-001">https://ca-times.brightspotcdn.com/dims4/default/daae540/2147483647/strip/true/crop/1365x2048+0+0/resize/840x1260!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0f%2Fe8%2F747281e24ae3f6318dcf54b38e3e%2Fla-ar-cutthroat-kitchens-alton-brown-branches-001</a></p>
+        
+                    <p class="links"><a href="https://pbs.twimg.com/profile_images/727212704574771200/bZay1J9F_400x400.jpg">https://pbs.twimg.com/profile_images/727212704574771200/bZay1J9F_400x400.jpg</a></p>
+        
+                    <p class="links"><a href="https://variety.com/wp-content/uploads/2019/04/alex-guarnaschelli-e1554356004358.jpg">https://variety.com/wp-content/uploads/2019/04/alex-guarnaschelli-e1554356004358.jpg</a></p>
+        
+                    <p class="links"><a href="https://images.squarespace-cdn.com/content/v1/54dcf44ae4b0a66b7533da85/1423777965821-UPWZ01R6UVPEOLXZCEDL/image-asset.jpeg?format=1500w">https://images.squarespace-cdn.com/content/v1/54dcf44ae4b0a66b7533da85/1423777965821-UPWZ01R6UVPEOLXZCEDL/image-asset.jpeg?format=1500w</a></p>
+        
+                    <p class="links"><a href="https://photos.app.goo.gl/Ss3hZUHay6wJyZA66">https://photos.app.goo.gl/Ss3hZUHay6wJyZA66</a></p>
+        
+                    <p class="links"><a href=""></a></p>
+                </td>
+            
+                    <td style="width: 400px; table-layout: fixed; overflow-wrap: break-word; vertical-align: top;">
+                        <p style="font-family: 'Special Elite', cursive; font-size: 16pt;">Articles:</p>
+            
+                        <p class="links"><a href="https://www.saveur.com/food/wild-game-cookbooks-teach-you-how-to-prep-venison-boar-and-more/">https://www.saveur.com/food/wild-game-cookbooks-teach-you-how-to-prep-venison-boar-and-more/</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/drinks/feral-apple-hunters-cider">https://www.foodandwine.com/drinks/feral-apple-hunters-cider</a></p>
+            
+                        <p class="links"><a href="https://www.ift.org/news-and-publications/food-technology-magazine/issues/2021/october/features/are-brands-still-relevant">https://www.ift.org/news-and-publications/food-technology-magazine/issues/2021/october/features/are-brands-still-relevant</a></p>
+            
+                        <p class="links"><a href="https://www.decanter.com/wine-news/major-wine-heist-in-spain-restaurant-owner-issues-plea-to-thieves-467989/">https://www.decanter.com/wine-news/major-wine-heist-in-spain-restaurant-owner-issues-plea-to-thieves-467989/</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/lifestyle/pineapple-pizza-chefs">https://www.foodandwine.com/lifestyle/pineapple-pizza-chefs</a></p>
+            
+                        <p class="links"><a href="https://www.tasteofhome.com/article/starbucks-holiday-drinks/">https://www.tasteofhome.com/article/starbucks-holiday-drinks/</a></p>
+            
+                        <p class="links"><a href="https://www.eatingwell.com/article/7797768/how-to-meal-prep-healthy-snacks-to-satisfy-any-craving/">https://www.eatingwell.com/article/7797768/how-to-meal-prep-healthy-snacks-to-satisfy-any-craving/</a></p>
+            
+                        <p class="links"><a href="https://www.eatingwell.com/article/7894307/simple-30-day-weight-loss-meal-plan-for-summer/">https://www.eatingwell.com/article/7894307/simple-30-day-weight-loss-meal-plan-for-summer/</a></p>
+            
+                        <p class="links"><a href="https://www.eatingwell.com/article/7894310/anti-inflammatory-meal-plan-for-beginners/">https://www.eatingwell.com/article/7894310/anti-inflammatory-meal-plan-for-beginners/</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/wild-mushroom-toasts">https://www.foodandwine.com/recipes/wild-mushroom-toasts</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/buttermilk-biscuits-and-sausage-gravy">https://www.foodandwine.com/recipes/buttermilk-biscuits-and-sausage-gravy</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/wild-mushroom-toasts">https://www.foodandwine.com/recipes/wild-mushroom-toasts</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/tofu-bhurji">https://www.foodandwine.com/recipes/tofu-bhurji</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/tofu-bhurjihttps://www.foodandwine.com/recipes/tofu-bhurji"></a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/salmon-and-arugula-frittata-with-pesto">https://www.foodandwine.com/recipes/salmon-and-arugula-frittata-with-pesto</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/ros-omelet-with-tomato-gravy">https://www.foodandwine.com/recipes/ros-omelet-with-tomato-gravy</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/brandy-pecan-pie">https://www.foodandwine.com/recipes/brandy-pecan-pie</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/apple-cheddar-rye-pie">https://www.foodandwine.com/recipes/apple-cheddar-rye-pie</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/chocolate-and-fig-cake">https://www.foodandwine.com/recipes/chocolate-and-fig-cake</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/philly-fluff-cake">https://www.foodandwine.com/recipes/philly-fluff-cake</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/salted-tahini-chocolate-shortbread">https://www.foodandwine.com/recipes/salted-tahini-chocolate-shortbread</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/double-chocolate-rye-cookies">https://www.foodandwine.com/recipes/double-chocolate-rye-cookies</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/smoked-ham-hock-and-lentil-soup">https://www.foodandwine.com/recipes/smoked-ham-hock-and-lentil-soup</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/kachumber-gazpachohttps://www.foodandwine.com/recipes/kachumber-gazpacho"></a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/white-chicken-chili">https://www.foodandwine.com/recipes/white-chicken-chili</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/soup/cream-soup/potato-and-leek-soup/potato-leek-soup-recipes">https://www.foodandwine.com/soup/cream-soup/potato-and-leek-soup/potato-leek-soup-recipes</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/black-bean-and-chorizo-soup">https://www.foodandwine.com/recipes/black-bean-and-chorizo-soup</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/shrimp-and-yuca-dumplings-soup">https://www.foodandwine.com/recipes/shrimp-and-yuca-dumplings-soup</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/chilled-soba-noodle-salad-with-yuzu-dressing">https://www.foodandwine.com/recipes/chilled-soba-noodle-salad-with-yuzu-dressing</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/life-changing-udon-with-soft-boiled-egg-hot-soy-and-black-pepper">https://www.foodandwine.com/recipes/life-changing-udon-with-soft-boiled-egg-hot-soy-and-black-pepper</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/calabrian-carbonara">https://www.foodandwine.com/recipes/calabrian-carbonara</a></p>
+
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/fettuccine-white-chicken-ragu">https://www.foodandwine.com/recipes/fettuccine-white-chicken-ragu</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/linguine-al-pesto-di-zucchine">https://www.foodandwine.com/recipes/linguine-al-pesto-di-zucchine</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/recipes/three-cheese-lasagna-roasted-red-peppers-and-mushrooms">https://www.foodandwine.com/recipes/three-cheese-lasagna-roasted-red-peppers-and-mushrooms</a></p>
+            
+                        <p class="links"><a href="https://panlasangpinoy.com/filipino-food-sour-shrimp-soup-sinigang-na-hipon-recipe/">https://panlasangpinoy.com/filipino-food-sour-shrimp-soup-sinigang-na-hipon-recipe/</a></p>
+            
+                        <p class="links"><a href="https://panlasangpinoy.com/filipino-food-sour-shrimp-soup-sinigang-na-hipon-recipe/">https://panlasangpinoy.com/filipino-food-sour-shrimp-soup-sinigang-na-hipon-recipe/</a></p>
+            
+                        <p class="links"><a href="https://panlasangpinoy.com/ginataang-tilapia/">https://panlasangpinoy.com/ginataang-tilapia/</a></p>
+            
+                        <p class="links"><a href="https://panlasangpinoy.com/filipino-chicken-adobo-recipe/">https://panlasangpinoy.com/filipino-chicken-adobo-recipe/</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/salads/how-to-build-green-salad">https://www.foodandwine.com/salads/how-to-build-green-salad</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/cooking-techniques/an-easy-trick-for-crispier-granola">https://www.foodandwine.com/cooking-techniques/an-easy-trick-for-crispier-granola</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/cooking-techniques/baking/how-to-clean-up-dough-after-baking">https://www.foodandwine.com/cooking-techniques/baking/how-to-clean-up-dough-after-baking</a></p>
+            
+                        <p class="links"><a href="https://www.foodandwine.com/cooking-techniques/barbeque/make-burger-patties-easy-hack">https://www.foodandwine.com/cooking-techniques/barbeque/make-burger-patties-easy-hack</a></p>
+            
+                        <p class="links"><a href="https://www.eatingwell.com/article/7882092/clean-eating-meal-plan-for-beginners/">https://www.eatingwell.com/article/7882092/clean-eating-meal-plan-for-beginners/</a></p>
+            
+                        <p class="links"><a href="https://www.eatingwell.com/article/7883904/clean-eating-meal-plan-on-a-budget/">https://www.eatingwell.com/article/7883904/clean-eating-meal-plan-on-a-budget/</a></p>
+            
+                        <p class="links"><a href="https://www.eatingwell.com/article/289100/1-day-clean-eating-meal-plan/">https://www.eatingwell.com/article/289100/1-day-clean-eating-meal-plan/</a></p>
+            
+                        <p class="links"><a href="https://www.eatingwell.com/article/7834741/healthy-high-blood-pressure-meal-plan-for-beginners/">https://www.eatingwell.com/article/7834741/healthy-high-blood-pressure-meal-plan-for-beginners/</a></p>
+            
+                        <p class="links"><a href="https://www.eatingwell.com/article/289979/7-day-healthy-blood-pressure-meal-plan-1200-calories/">https://www.eatingwell.com/article/289979/7-day-healthy-blood-pressure-meal-plan-1200-calories/</a></p>
+            
+                        <p class="links"><a href="https://www.eatingwell.com/article/291105/1-day-1500-calorie-meal-plan-for-high-blood-pressure/">https://www.eatingwell.com/article/291105/1-day-1500-calorie-meal-plan-for-high-blood-pressure/</a></p>
+            
+                        <p class="links"><a href="https://www.eatingwell.com/article/7921490/comfort-food-meal-plan-to-lower-high-cholesterol/">https://www.eatingwell.com/article/7921490/comfort-food-meal-plan-to-lower-high-cholesterol/</a></p>
+            
+                        <p class="links"><a href="https://www.eatingwell.com/article/7884046/heart-healthy-diet-plan-for-beginners/">https://www.eatingwell.com/article/7884046/heart-healthy-diet-plan-for-beginners/</a></p>
+
+                        <p class="links"><a href="https://www.eatingwell.com/article/7677248/pescatarian-diet-plan/">https://www.eatingwell.com/article/7677248/pescatarian-diet-plan/</a></p>
+
+                        <p class="links"><a href="https://www.eatingwell.com/article/290543/1-day-dairy-free-healthy-pregnancy-meal-plan-2900-calories/">https://www.eatingwell.com/article/290543/1-day-dairy-free-healthy-pregnancy-meal-plan-2900-calories/</a></p>
+
+                        <p class="links"><a href="https://www.eatingwell.com/article/289979/7-day-healthy-blood-pressure-meal-plan-1200-calories/">https://www.eatingwell.com/article/289979/7-day-healthy-blood-pressure-meal-plan-1200-calories/</a></p>
+
+                        <p class="links"><a href="https://www.eatingwell.com/article/290339/1-day-low-sodium-healthy-pregnancy-meal-plan-2200-calories/">https://www.eatingwell.com/article/290339/1-day-low-sodium-healthy-pregnancy-meal-plan-2200-calories/</a></p>
+
+                        <p class="links"><a href="https://www.eatingwell.com/article/7894304/diabetes-meal-plan-on-a-budget/">https://www.eatingwell.com/article/7894304/diabetes-meal-plan-on-a-budget/</a></p>
+
+                        <p class="links"><a href="https://www.eatingwell.com/article/291744/gestational-diabetes-meal-plan-diet-guidelines/">https://www.eatingwell.com/article/291744/gestational-diabetes-meal-plan-diet-guidelines/</a></p>
+
+                        <p class="links"><a href="https://www.eatingwell.com/article/290459/the-best-7-day-diabetes-meal-plan/">https://www.eatingwell.com/article/290459/the-best-7-day-diabetes-meal-plan/</a></p>
+
+                        <p class="links"><a href="https://www.eatingwell.com/article/290676/7-day-flat-belly-meal-plan/">https://www.eatingwell.com/article/290676/7-day-flat-belly-meal-plan/</a></p>
+
+                        <p class="links"><a href="https://www.eatingwell.com/article/291744/gestational-diabetes-meal-plan-diet-guidelines/">https://www.eatingwell.com/article/291744/gestational-diabetes-meal-plan-diet-guidelines/</a></p>
+
+                        <p class="links"><a href="https://www.eatingwell.com/article/287731/7-day-diet-meal-plan-to-lose-weight-1800-calories/">https://www.eatingwell.com/article/287731/7-day-diet-meal-plan-to-lose-weight-1800-calories/</a></p>
+
+                        <p class="links"><a href="https://en.wikipedia.org/wiki/Gordon_Ramsay">https://en.wikipedia.org/wiki/Gordon_Ramsay</a></p>
+
+                        <p class="links"><a href="https://en.wikipedia.org/wiki/Jamie_Oliver">https://en.wikipedia.org/wiki/Jamie_Oliver</a></p>
+
+                        <p class="links"><a href="https://en.wikipedia.org/wiki/Alton_Brown">https://en.wikipedia.org/wiki/Alton_Brown</a></p>
+
+                        <p class="links"><a href="https://en.wikipedia.org/wiki/Emeril_Lagasse">https://en.wikipedia.org/wiki/Emeril_Lagasse</a></p>
+
+                        <p class="links"><a href="https://en.wikipedia.org/wiki/Alex_Guarnaschelli">https://en.wikipedia.org/wiki/Alex_Guarnaschelli</a></p>
+
+                        <p class="links"><a href="https://en.wikipedia.org/wiki/Michael_Symon">https://en.wikipedia.org/wiki/Michael_Symon</a></p>
+
+                        <p style="font-family: 'Special Elite', cursive; font-size: 16pt;">Videos:</p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/ie6GyJbtDP8">https://www.youtube.com/embed/ie6GyJbtDP8</a></p>
+
+                        <p class="links"><a href="ttps://www.youtube.com/embed/9xppRtAUJQk">ttps://www.youtube.com/embed/9xppRtAUJQk</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/-dWpHngp_ug">https://www.youtube.com/embed/-dWpHngp_ug</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/vu6t4BoJRD8">https://www.youtube.com/embed/vu6t4BoJRD8</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/qu3puw6tmSA">https://www.youtube.com/embed/qu3puw6tmSA</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/Q4UmkGsqYZw">https://www.youtube.com/embed/Q4UmkGsqYZw</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/5j5e-y2JCgo">https://www.youtube.com/embed/5j5e-y2JCgo</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/IKnTtTyuFts">https://www.youtube.com/embed/IKnTtTyuFts</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/9Qe-7tuMOIY">https://www.youtube.com/embed/9Qe-7tuMOIY</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/1rjBNrQvRcI">https://www.youtube.com/embed/1rjBNrQvRcI</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/-s6F-0wwJag">https://www.youtube.com/embed/-s6F-0wwJag</a></p>
+
+                        <p class="links"><a href="ttps://www.youtube.com/embed/-ggI-E5n-24">ttps://www.youtube.com/embed/-ggI-E5n-24</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/niADTK-pT04">https://www.youtube.com/embed/niADTK-pT04</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/168ewVo18DI">https://www.youtube.com/embed/168ewVo18DI</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/UbQtAdo0SnI">https://www.youtube.com/embed/UbQtAdo0SnI</a></p>
+
+                        <p class="links"><a href="ttps://www.youtube.com/embed/A4L34uHmm-Y">ttps://www.youtube.com/embed/A4L34uHmm-Y</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/6hXFR9xwZPg">https://www.youtube.com/embed/6hXFR9xwZPg</a></p>
+
+                        <p class="links"><a href="https://www.youtube.com/embed/6jb4zRKQC-o">https://www.youtube.com/embed/6jb4zRKQC-o</a></p>
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <table>
+                <tr>
+                    <td style="width: 25%;"></td>                 
+                    <td style="width: 25%; vertical-align: top;">
+                        <p class="footer-headlines">FOLLOW ME:</p>
+
+                        <p class="footer-details">FACEBOOK: QwynTasty</p>
+
+                        <p class="footer-details">TWITTER: QwynTasty</p>
+
+                        <p class="footer-details">INSTAGRAM: qwyntasty</p>
+                    </td>
+
+                    <td style="width: 25%; vertical-align: top;">
+                        <p class="footer-headlines">CONTACT ME:</p>
+
+                        <p class="footer-details">TELEPHONE #: (234) 235-5678</p>
+
+                        <p class="footer-details">E-MAIL: qwyntasty@gmail.com.ph</p>
+
+                        <p class="footer-details">ADDRESS: Sgt. Esguerra Avenue cor Mother Ignacia Street, Diliman, Quezon City 1103 Philippines</p>
+                    </td>
+
+                    <td style="width: 25%;"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+                        <p class="footer-copyright">© 2021 QwynTasty. All Rights Reserved.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
