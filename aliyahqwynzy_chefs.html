@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>QwynTasty | Chefs</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rye&family=Special+Elite&display=swap');
+        
+
+        #titlebanner {
+            width: 1440px;
+            height: 200px;
+            background-image: url(https://lh3.googleusercontent.com/7Xwa-rjHQTyO-yFril-VmFemTh5ogcRBmdId9Wrf64932rYw8tnxt7DCM7rR0c48c81aaKsj7yOqUM83-RIHAjfiLAUzXuR9ov8pD2lF-3n9Ft4aXpful-Cw2fEkgScpLsZJYmXpudYF2mF0HnZYXrEBtAUzDNUoWjnikBVrQogwa8Kd-7_t5u8Na5AJmBwKVxrWIrxEP9_ZUfVx1i6fGmosNVspgF5tZbLk2GxjZvTZUIiPkfegFuJYFi0OYIUIY4VkMFjrzHy60UR6A2b0ksK6g4liknUtu5aYyfWz16xqjGfNOOqInhUpw1IK55dTZofEV_BWyBpOUMBRZlV45W1W_d7JaDn_TRBeABags0W8NkbO0X_fBLK9dcAwLIn-AurJ-ANifH_OMhfjgD9UeyrXXb4XMpqi2Fs4uvlTML9tatDBCZUM6RDxTO5b3AzTyddlqVo6XgNkEFaAwy_cqdZmsTC406Ih6jQ8pZ-n5khvhUc36dEd1PPhqzWjQacui1TvxUKNxICDnqhkvdQ_XDOU-nRlmDry7jbBW6_6UMz9GcxhOGBICX6vnicGto2BxbJH7gl3UhtnUAzUqDGuioWZ4xMrjVC8D_bDbrpnD4ugxUbzGMlG7dlqf7MyUp3yWqkHKRT24H29CR77TLyZcVDgQhmiYVZeVLZyhqty5BL8sDS5rePdT78YrGn64Lh7tfUVyGbZ9Qn2L2qqF3YeoEx9=w1440-h200-no?authuser=0);
+            margin-left: -8px;
+            margin-top: -8px;
+            background-position: center;
+        }
+
+        .navbar {
+            margin-left: -8px;
+            background-color: #E8D5C4;
+            width: 1440px;
+        }
+
+        .navbarcell {
+            padding-left: 20px;
+        }
+
+        .navbar-content a {
+            font-family: 'Special Elite', cursive;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 20pt;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar-content a:hover {
+            text-decoration: underline;
+            color: #332B32;
+        }
+
+        #navbar-date {
+            text-align: right;
+            font-family: 'Special Elite', cursive;
+            padding-left: 20px;
+            padding-right: 30px;
+            font-size: 20pt;
+            color: black;
+            width: 560px;
+        }
+
+        .title {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 36pt;
+            color: black;
+            font-weight: bold;
+            vertical-align: top;
+            text-decoration: none;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 22pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-top: -50px;
+        }
+
+        .sections-title {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 28pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: bold;
+        }
+
+        .sections-subtitle {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 20pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+            margin-left: 30px;
+            margin-top: -35px;
+        }
+
+        .articles-table {
+            width: 1440px;
+            margin-left: -8px;
+        }
+
+        .description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18pt;
+            margin-left: 30px;
+            text-align: center;
+        }
+
+        .description1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16pt;
+            margin-left: 30px;
+        }
+
+        .description1 a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16pt;
+            color: black;
+            text-decoration: none;
+        }
+
+        .description1 a:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .chef-pics {
+            width: 200px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid black;
+        }
+
+        .vid {
+            width: 420px;
+            height: 236px;
+            border: 2px solid black;
+        }
+
+        .videos {
+            width: 1440px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-top: 30px;
+        }
+
+        .footer {
+            width: 1440px;
+            height: 350px;
+            background-color: #332B32;
+            margin-left: -8px;
+        }
+
+        .footer-headlines {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 24pt;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .footer-details {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 16pt;
+            text-align: center;
+            vertical-align: top;
+            margin-top: -12px;
+        }
+
+        .footer-copyright {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 16pt;
+            text-align: center;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+    </style>
+    </head>
+
+    <body style="width: 1440px; margin: 0px">
+        <div id="titlebanner"></div>
+        
+        <table class="navbar">
+            <tr>
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="index.html">HOME</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_recipes.html">RECIPES</a></p>
+                </td>
+ 
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_mealplans.html">MEAL PLANS</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_chefs.html">CHEFS</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_about.html">ABOUT</a></p>
+                </td>
+
+                <td id="navbar-date">
+                    <p>NOVEMBER | 2021</p>
+                </td>
+            </tr>
+        </table>
+
+        <div>
+            <p class="title">CHEFS ON THE INTERNET</p>
+            <p class="subtitle">COOKIN' LIKE A CHEF, I'M A 5-STAR MICHELIN<br>TUTORIALS 101</p>
+        </div>
+
+        <div class="description">
+            <p>Cooking is actually not that hard, but tutorials from the chefs on YouTube, Facebook, and other social media platforms make it easier for us to learn how to cook various dishes. Here are the chefs that could teach you <br>how to be good in the kitchen.</p>
+        </div>
+        
+        <div>
+            <p class="sections-title">GORDON RAMSAY</p>
+            <p class="sections-subtitle">“This lamb is so undercooked, it’s following Mary to school!”</p>
+
+        <table style="width: 1410px; padding-left: 30px; padding-right: 30px; margin-top: -10px;">
+            <tr>
+                <td>
+                    <img src="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ed53f23da1f770006140c3c%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D1567%26cropX2%3D3494%26cropY1%3D155%26cropY2%3D2083" class="chef-pics" alt="Gordon Ramsay">
+                </td>
+
+                <td>
+                    <p class="description1">Gordon James Ramsay is a British chef, restaurateur, television personality and writer. As a reality television personality, Ramsay is known for his bluntness, as well as fiery temper, strict demeanour, and frequent use of profanity. He combines activities in the television, film, hospitality, and food industries and has promoted and hired various chefs who have apprenticed under his wing. Ramsay is known for presenting TV programmes about competitive cookery and food.</p>
+
+                    <p class="description1">YouTube Channel: <a href="https://www.youtube.com/user/gordonramsay">Gordon Ramsay</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Facebook: <a href="https://twitter.com/GordonRamsay?s=20">Gordon Ramsay</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Twitter: <a href="https://www.facebook.com/gordonramsay">Gordon Ramsay</a></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class="videos">
+            <tr>
+                <td style="width: 480px;">
+                    <iframe src="https://www.youtube.com/embed/ie6GyJbtDP8" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+
+                <td style="width: 480px">
+                    <iframe src="https://www.youtube.com/embed/9xppRtAUJQk" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+                
+                <td style="width: 480px">
+                    <iframe src="https://www.youtube.com/embed/-dWpHngp_ug" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+            </tr>
+        </table>
+        
+        </div>
+            <hr>
+        <div>
+            <p class="sections-title">JAMIE OLIVER</p>
+            <p class="sections-subtitle">“Real food doesn't have ingredients, real food is ingredients.”</p>
+
+        <table style="width: 1440px; padding-left: 30px; padding-right: 30px; margin-top: -10px;">
+            <tr>
+                <td>
+                    <img src="https://cdn.britannica.com/20/200220-050-394A5A7C/Jamie-Oliver-2016.jpg" class="chef-pics" alt="Jamie Oliver">
+                </td>
+
+                <td>
+                    <p class="description1">Jamie Trevor Oliver is a British chef, restaurateur, and cookbook author. He is known for his casual approach to cuisine, which has led him to front numerous television shows and open many restaurants. From June 2000, Oliver became the public face of the Sainsbury's supermarket chain in the UK, appearing on television and radio advertisements and in-store promotional material.</p>
+
+                    <p class="description1">YouTube Channel: <a href="https://www.youtube.com/c/jamieoliver">Jamie Oliver</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Facebook: <a href="https://www.facebook.com/jamieoliver/">Jamie Oliver</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Twitter: <a href="https://twitter.com/jamieoliver?s=20">Jamie Oliver</a></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class="videos">
+            <tr>
+                <td style="width: 480px;">
+                    <iframe src="https://www.youtube.com/embed/vu6t4BoJRD8" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+
+                <td style="width: 480px">
+                    <iframe src="https://www.youtube.com/embed/qu3puw6tmSA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+                
+                <td style="width: 480px">
+                    <iframe src="https://www.youtube.com/embed/Q4UmkGsqYZw" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+            </tr>
+        </table>
+        
+        </div>
+        <hr>
+        <div>
+            <p class="sections-title">ALTON BROWN</p>
+            <p class="sections-subtitle">“Cooking is an observation-based process that you can't do if you're so completely focused on a recipe.”</p>
+
+        <table style="width: 1440px; padding-left: 30px; padding-right: 30px; margin-top: -10px;">
+            <tr>
+                <td>
+                    <img src="https://ca-times.brightspotcdn.com/dims4/default/daae540/2147483647/strip/true/crop/1365x2048+0+0/resize/840x1260!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0f%2Fe8%2F747281e24ae3f6318dcf54b38e3e%2Fla-ar-cutthroat-kitchens-alton-brown-branches-001" class="chef-pics" alt="Alton Brown">
+                </td>
+
+                <td>
+                    <p class="description1">Alton Crawford Brown Jr. is an American television personality, food show presenter, chef, author, actor, cinematographer, and musician. He is the creator and host of the Food Network television show Good Eats that ran for 14 seasons, host of the miniseries Feasting on Asphalt and Feasting on Waves, and host and main commentator on Iron Chef America and Cutthroat Kitchen. Brown is a best-selling author of several books on food and cooking. A recap series titled "Good Eats Reloaded" aired on Cooking Channel starting in October 2018, and a true sequel series, Good Eats: The Return, premiered on August 25, 2019, on Food Network.</p>
+
+                    <p class="description1">YouTube Channel: <a href="https://www.youtube.com/c/AltonBrown">Alton Brown</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Facebook: <a href="https://www.facebook.com/altonbrown">Alton Brown</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Twitter: <a href="https://twitter.com/altonbrown?s=20">Alton Brown</a></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class="videos">
+            <tr>
+                <td style="width: 480px;">
+                    <iframe src="https://www.youtube.com/embed/5j5e-y2JCgo" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+
+                <td style="width: 480px">
+                    <iframe src="https://www.youtube.com/embed/IKnTtTyuFts" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+                
+                <td style="width: 480px">
+                    <iframe src="https://www.youtube.com/embed/9Qe-7tuMOIY" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        </div>
+
+        <div>
+            <p class="sections-title">EMERIL LAGASSE</p>
+            <p class="sections-subtitle">“Cooking is so popular today because it's the perfect mix of food and fun.”</p>
+
+        <table style="width: 1440px; padding-left: 30px; padding-right: 30px; margin-top: -10px;">
+            <tr>
+                <td>
+                    <img src="https://pbs.twimg.com/profile_images/727212704574771200/bZay1J9F_400x400.jpg" class="chef-pics" alt="Emeril Lagasse">
+                </td>
+
+                <td>
+                    <p class="description1">Emeril John Lagassé III  is an American celebrity chef, restaurateur, television personality, cookbook author, and National Best Recipe award winner for his "Turkey and Hot Sausage Chili" recipe in 2003. He is a regional James Beard Award winner, known for his mastery of Creole and Cajun cuisine and his self-developed "New New Orleans" style. He has appeared on a wide variety of cooking TV shows, including the long-running Food Network shows Emeril Live and Essence of Emeril, and is associated with several catchphrases, including "Kick it up a notch!" and "Bam!" Lagasse's portfolio of media, products, and restaurants generates an estimated US$150 million annually in revenue.</p>
+
+                    <p class="description1">YouTube Channel: <a href="https://www.youtube.com/user/emeril">Emeril Lagasse</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Facebook: <a href="https://www.facebook.com/Emeril">Emeril Lagasse</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Twitter: <a href="https://twitter.com/Emeril?s=20">Emeril Lagasse</a></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class="videos">
+            <tr>
+                <td style="width: 480px;">
+                    <iframe src="https://www.youtube.com/embed/1rjBNrQvRcI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+
+                <td style="width: 480px">
+                    <iframe src="https://www.youtube.com/embed/-s6F-0wwJag" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+                
+                <td style="width: 480px">
+                    <iframe src="https://www.youtube.com/embed/-ggI-E5n-24" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+            </tr>
+        </table>
+        
+        </div>
+<hr>
+        <div>
+            <p class="sections-title">ALEX GUARNASCHELLI</p>
+            <p class="sections-subtitle">"Give yourself enough time to really learn how to cook."</p>
+
+        <table style="width: 1440px; padding-left: 30px; padding-right: 30px; margin-top: -10px;">
+            <tr>
+                <td>
+                    <img src="https://variety.com/wp-content/uploads/2019/04/alex-guarnaschelli-e1554356004358.jpg" class="chef-pics" alt="Alex Guarnaschelli">
+                </td>
+
+                <td>
+                    <p class="description1">Alexandra Maria Guarnaschelli is an American chef. She currently serves as an executive chef at New York City's Butter restaurant and was executive chef at The Darby restaurant before its closing. She appears as a television personality on the Food Network shows The Kitchen, Chopped (as a judge), Iron Chef America, All Star Family Cook-off, Guy's Grocery Games (as both a judge and a competitor), and The Best Thing I Ever Ate. She hosts Alex's Day Off, The Cooking Loft and Supermarket Stakeout on Food Network and Cooking Channel. In 2012, she won that season of The Next Iron Chef: Redemption.</p>
+
+                    <p class="description1">Watch Her On: <a href="https://www.youtube.com/c/FoodNetwork">Food Network</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Facebook: <a href="https://www.facebook.com/chefalexguarnaschelli">Alex Guarnaschelli</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Twitter: <a href="https://twitter.com/guarnaschelli?s=20">alex guarnaschelli
+                    </a></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class="videos">
+            <tr>
+                <td style="width: 480px;">
+                    <iframe  src="https://www.youtube.com/embed/niADTK-pT04" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+
+                <td style="width: 480px">
+                    <iframe src="https://www.youtube.com/embed/168ewVo18DI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+                
+                <td style="width: 480px">
+                    <iframe src="https://www.youtube.com/embed/UbQtAdo0SnI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+            </tr>
+        </table>
+        
+        </div>
+<hr>
+        <div>
+            <p class="sections-title">MICHAEL SYMON</p>
+            <p class="sections-subtitle">"If you learn a recipe, you can cook the recipe. If you learn the technique, you can cook anything."</p>
+
+        <table style="width: 1440px; padding-left: 30px; padding-right: 30px; margin-top: -10px;">
+            <tr>
+                <td>
+                    <img src="https://images.squarespace-cdn.com/content/v1/54dcf44ae4b0a66b7533da85/1423777965821-UPWZ01R6UVPEOLXZCEDL/image-asset.jpeg?format=1500w" class="chef-pics" alt="Michael Symon">
+                </td>
+
+                <td>
+                    <p class="description1">Michael D. Symon is an American chef, restaurateur, television personality, and author. He is of Greek, Sicilian, and Eastern European descent. He is seen regularly on Food Network on shows such as Iron Chef America, Burgers, Brew and 'Que, Food Feuds, and The Best Thing I Ever Ate, as well as Cook Like an Iron Chef on the Cooking Channel and The Chew on ABC. He has also made numerous contributions to periodicals such as Bon Appétit, Esquire, Food Arts, Gourmet, Saveur and O, The Oprah Magazine.</p>
+
+                    <p class="description1">Watch Him On: <a href="https://www.youtube.com/c/FoodNetwork">Food Network</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Facebook: <a href="https://www.facebook.com/IronChefMichaelSymon">Michael D. Symon</a></p>
+
+                    <p class="description1" style="margin-top: -20px;">Twitter: <a href="https://twitter.com/chefsymon?s=20">michael symon</a></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class="videos" style="margin-bottom: 40px;">
+            <tr>
+                <td style="width: 480px;">
+                    <iframe src="https://www.youtube.com/embed/A4L34uHmm-Y" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+
+                <td style="width: 480px">
+                    <iframe src="https://www.youtube.com/embed/6hXFR9xwZPg" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+                
+                <td style="width: 480px">
+                    <iframe  src="https://www.youtube.com/embed/6jb4zRKQC-o" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe>
+                </td>
+            </tr>
+        </table>
+    
+        </div>
+
+        <div class="footer">
+            <table>
+                <tr>
+                    <td style="width: 25%;"></td>                 
+                    <td style="width: 25%; vertical-align: top;">
+                        <p class="footer-headlines">FOLLOW ME:</p>
+
+                        <p class="footer-details">FACEBOOK: QwynTasty</p>
+
+                        <p class="footer-details">TWITTER: QwynTasty</p>
+
+                        <p class="footer-details">INSTAGRAM: qwyntasty</p>
+                    </td>
+
+                    <td style="width: 25%; vertical-align: top;">
+                        <p class="footer-headlines">CONTACT ME:</p>
+
+                        <p class="footer-details">TELEPHONE #: (234) 235-5678</p>
+
+                        <p class="footer-details">E-MAIL: qwyntasty@gmail.com.ph</p>
+
+                        <p class="footer-details">ADDRESS: Sgt. Esguerra Avenue cor Mother Ignacia Street, Diliman, Quezon City 1103 Philippines</p>
+                    </td>
+
+                    <td style="width: 25%;"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+                        <p class="footer-copyright">© 2021 QwynTasty. All Rights Reserved.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
