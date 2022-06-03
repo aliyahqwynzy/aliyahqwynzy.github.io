@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+        <title> Paws&Claws | Home</title>
+        <!-- Google Fonts | Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/99ee60e21f.js" crossorigin="anonymous"></script>
+
+        <style>
+            @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+            @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,100");
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@400;500&display=swap');
+    
+            html,
+            body {
+                width: 100%;
+                background-color: rgb(255, 238, 228);
+            }
+    
+            header {
+                padding: 0px;
+                text-align: center;
+                background-color: #5D3313;
+                background-image: url(https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/280644433_331042479176718_7471953220692409488_n.png?stp=dst-png_s2048x2048&_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHnKI98sTYnSZ8GFNpT0qI5ZgU9450I6XFmBT3jnQjpccjPY8aw7Z2DAk89uQOAH8E8HGmD9T6DBbH0GDBe4urC&_nc_ohc=iwaUsVz2cXsAX8pWmQ0&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVLj6Ev5mSxpSDMPvj43G0LI8KBTA3s-bgldS95rBMZ11A&oe=62BAC539);
+                background-size: cover;
+            }
+    
+            #heading {
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            #logo {
+                width: 200px;
+                margin-top: 1.5%;
+                margin-bottom: 1.5%;
+                display: inline;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                border-width: 8px;
+                border-style: solid;
+                border-color: #dfab67;
+            }
+    
+            /* nav bar */
+    
+            .menu {
+                background: #f9d3b6;
+                box-shadow: 1px 1px 3px rgba(155, 142, 142, 0.5);
+                position: sticky;
+                top: 0;
+                text-align: center;
+            }
+    
+            .menu p {
+                padding: 13px 25px 0px 25px;
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: bolder;
+                font-family: 'Quicksand', sans-serif;
+                color: #5D3313;
+            }
+
+            a {
+                text-decoration: none;
+                color: #532908;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                color: #532908;
+            }
+
+            .menu1 {
+                background: #f9d3b6;
+                box-shadow: 1px 1px 3px rgba(155, 142, 142, 0.5);
+                position: sticky;
+                top: 0;
+                text-align: center;
+                display: none;
+            }
+
+            .menu1 p {
+                padding: 13px 15px 0px 15px;
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: bolder;
+                font-family: 'Quicksand', sans-serif;
+                color: #5D3313;
+            }
+
+            .dogDropdown {
+                display: inline-block;
+                position: relative;
+            }
+
+            .catDropdown {
+                display: inline-block;
+                position: relative;
+            }
+
+            .dogList {
+                display: none;
+                position: absolute;
+                top: 56px;
+                left: -38px;
+                background: #f9d3b6;
+                transition: 0.3s;
+                width: fit-content;
+            }
+
+            .catList {
+                display: none;
+                position: absolute;
+                top: 56px;
+                left: -38px;
+                background: #f9d3b6;
+                transition: 0.3s;
+                width: fit-content;
+            }
+
+            .dogDropdown:hover .dogList {
+                display: inline-block;
+            }
+
+            .catDropdown:hover .catList {
+                display: inline-block;
+            }
+
+
+    
+            /* subhead */
+    
+            #subhead {
+                padding-top: 10px;
+                margin: auto;
+                margin: 25px 0;
+                text-align: center;
+                display: block;
+            }
+    
+            /* products */
+    
+            .products {
+                flex-shrink: 0;
+                flex-basis: 30%;
+                display: inline-block;
+                background-color: #ffd2a7;
+                margin-bottom: 21px;
+                margin-top: 21px;
+                margin-left: 1.66%;
+                margin-right: 1.66%;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 2px 2px 3px #6d3f1b;
+                text-align: center;
+                vertical-align: top;
+            }
+    
+            .productsPic {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                box-shadow: 2px 2px 3px #a37755;   
+            }
+    
+            #sectionProducts {
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 3%;
+                padding-bottom: 5%;
+            }
+    
+            .productsTitle {
+                text-align: center;
+                font-family: 'Quicksand', sans-serif;
+                color: #532908;
+                font-weight: bold;
+                font-size: 19pt;
+            }
+    
+            .productsPrice {
+                font-family: 'Quicksand', sans-serif;
+                font-size: 22px;
+                font-weight: bold;
+                color: #5b2700;
+                margin-top: -10px;
+            }
+
+            .subtitles {
+                font-family: 'Quicksand', sans-serif;
+                text-align: center;
+                font-size: 35pt;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 12px;
+                color: #532908;
+                margin-bottom: -10px;
+                margin-top: 15px;
+            }
+
+            .subtitles1 {
+                font-family: 'Quicksand', sans-serif;
+                text-align: center;
+                font-size: 35pt;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 1%;
+                color: white;margin: auto;
+                padding-top: 28px;
+                padding-bottom: 18px
+            }
+
+            ::-webkit-scrollbar {
+                width: 5px;
+                height: 5px;
+            }
+
+            ::-webkit-scrollbar-track {
+                border-radius: 5px;
+            }
+
+            ::-webkit-scrollbar-thumb  {
+                background: #C19463;
+                border-radius: 5px;
+            }
+
+            #CatAccessories {
+                display: inline;
+                color: rgb(255, 238, 228);
+                font-size: 0px;
+                position: relative;
+                top: -43px;
+            }
+
+            #CatFood {
+                display: inline;
+                color: rgb(255, 238, 228);
+                font-size: 0px;
+                position: relative;
+                top: -43px;
+            }
+
+            #DogAccessories {
+                display: inline;
+                color: rgb(255, 238, 228);
+                font-size: 0px;
+                position: relative;
+                top: -43px;
+            }
+
+            #DogFood {
+                display: inline;
+                color: rgb(255, 238, 228);
+                font-size: 0px;
+                position: relative;
+                top: 15px;
+            }
+
+            #products1 {
+                margin-bottom: -12px;
+            }
+
+            #products2 {
+                margin-bottom: -12px;
+            }
+
+            #products3 {
+                margin-bottom: -12px;
+            }
+
+            #products4 {
+                margin-bottom: -12px;
+            }
+    
+            /* form */ 
+            
+
+            #sectionCustomer {
+                background-color: #5D3313;
+                background-image: url(https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/280966620_398568555652018_8635822255921787230_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFyyJvbFMHvsMQGrIfD6_FVSAnsBmjUCJ5ICewGaNQInobf6cFgZgUCI-9Y_Fh4G4J3_FMt1wlk-Lia_EgPimao&_nc_ohc=uhkTpDaE1GgAX9n0Sa5&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVJtcf_2CPte1CMVk7VRkJfOcUOq1erRZwmM-vklsdNXiQ&oe=62BEFD46);
+                background-size: cover;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                height: 100vh;
+                overflow: hidden;
+                height: max-content;
+            }
+
+
+
+            #formList {
+                width: 75%;
+                margin-left: auto;
+                margin-right: auto;
+                min-height: 500px;
+            }
+
+            #list {
+                width: 40%;
+                display: inline-block;
+                padding-right: 7.5px;
+            }
+
+            #form {
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+                display: inline;
+                padding-left: 7.5px;
+                float: right;
+                margin-bottom: 50px;
+            }
+
+            .details {
+                font-family: 'Quicksand', sans-serif;
+                margin-bottom: 10px;
+                font-size: 18px;
+                width: 100%;
+                color: #532908;
+                font-weight: bold;
+                padding: 5px;
+                border-radius: 4px;
+                border: 0;
+            }
+
+            label {
+                color: white;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .price {
+                padding-bottom: 35px;
+                color: white;
+                font-family: 'Quicksand', sans-serif;
+                font-size: 18px;
+                margin-top: -25px;
+            }
+
+
+            .subtitles3 {
+                color: white;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: bold;
+                font-size: 22pt;
+                margin-bottom: 9px; 
+            }
+
+            .listProducts {
+                color: white;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: bold;
+                font-size: 18px;
+            }
+    
+            .listPrices {
+                color: white;
+                margin-top: -18px;
+                font-family: 'Quicksand', sans-serif;
+            }
+
+            #cart {
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 30px;
+                max-height: 325px;
+                overflow-y: auto;
+            }
+
+            .subtitles2 {
+                color: white;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: bold;
+                font-size: 22pt;
+            }
+
+            #deleteButton {
+                background-color: transparent;
+                border: 0;
+                float: right;
+                display: inline;
+                margin-top: 20px;
+            }
+
+            .cartList {
+                display: inline-block;
+                width: 80%;
+
+            }
+            
+            .material-icons {
+                font-family: 'Material Icons';
+                color: white;
+                font-size: 30px;
+            }
+
+            #submit {
+                background-color: transparent;
+                color: white;
+                border: 2px solid white;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: bold;
+                font-size: 18px;
+                border-radius: 8px;
+                margin-top: 18px;
+                padding: 6px 12px 6px 12px;
+                transition: ease 0.3s;
+            }
+
+            #submit:hover {
+                color: #532908;
+                background-color: white;
+            }
+
+            #submit:active {
+                color: #532908;
+                background-color: white;
+                transform: translateY(2px)
+            }
+
+            .items {
+                text-align: center;
+            }
+
+            .add {
+                background-color: transparent;
+                color: #532908;
+                border: 2px solid #532908;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: bold;
+                font-size: 18px;
+                border-radius: 8px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                width: 50%;
+                transition: ease 0.3s;
+            }
+
+            .add:hover {
+                font-weight: bolder;
+                color: #ffffff;
+                border: 2.1px solid #7c3c0c;
+                background-color: #7c3c0c;
+            }
+
+            .add:active {
+                color: #532908;
+                background-color: white;
+                transform: translateY(2px)
+            }
+
+            /* media queries 8 */
+            @media all and (max-width: 960px) {
+                .products {
+                    flex-basis: 46.6666%;
+                }
+            }
+
+            @media all and (max-width: 670px) {
+                .products {
+                    flex-basis: 60%;
+                }
+            }
+
+            @media all and (max-width: 955px) {
+                .menu p {
+                    padding: 13px 15px 0px 15px;
+                }
+            }
+
+            @media all and (max-width: 500px) {
+                .products {
+                    flex-basis: 75%;
+                }
+            }
+
+            @media all and (max-width: 450px) {
+                .products {
+                    flex-basis: 96%;
+                }
+            }
+
+            @media all and (max-width: 835px) {
+                .menu {
+                    display: none;
+                }
+
+                .menu1 {
+                    display: block;
+                }
+            }
+
+            @media all and (max-width: 895px) {
+                #formList {
+                    width: 95%;
+                }
+            }
+
+            @media all and (max-width: 699px) {
+                #list {
+                    width: 50%;
+                }
+
+                #form {
+                    width: 50%;
+                }
+            }
+
+            @media all and (max-width: 602px) {
+                #form {
+                    width: 100%;
+                    padding: 0;
+                    margin-top: -20px;
+                }
+
+                #list {
+                    width: 100%;
+                    padding: 0;
+                }
+                
+                #cart {
+                    max-height: 325px;
+                }
+            }
+
+            @media all and (max-width: 365px) {
+                .menu1 p {
+                    padding-left: 7px;
+                    padding-right: 7px;
+                }
+            }
+
+            #products1{
+                text-align: center;
+                display: flex;
+                overflow: auto;
+            }
+
+            #products2{
+                text-align: center;
+                display: flex;
+                overflow: auto;
+            }
+
+            #products3{
+                text-align: center;
+                display: flex;
+                overflow: auto;
+            }
+
+            #products4{
+                text-align: center;
+                display: flex;
+                overflow: auto;
+            }
+
+            #subhead-img {
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: -70px;
+            }
+
+            /*footer*/
+
+            footer {
+                margin-bottom: 0px;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                text-align: center;
+                font-family: 'Playfair Display', serif;
+                font-size: 20px;
+                color: #fff4f4;
+                background-color: #6d4324;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div id="heading">
+                <img src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/282120487_1053511598589166_5386029982585561793_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGVTg3z40ecs-kf3CvWjLa97L-7FmXPQnLsv7sWZc9CcvOK-lSBGuTX1z0EX5qsjZaHzCR3pdXU0ced7W4-iGjx&_nc_ohc=TxiV9hU22NYAX8zXOuk&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVK69WQSbKYq-akREYxrw-VlrHH5k0F1_SMm6KPdU0LcrA&oe=62BC0DA9"
+                    alt="logo" id="logo">
+            </div>
+        </header>
+
+        <nav class="menu">
+            <p><a href="#heading">HOME</a></p>
+            <p><a href="#DogFood">DOG FOOD</a></p>
+            <p><a href="#DogAccessories">DOG ACCESSORIES</a></p>
+            <p><a href="#CatFood">CAT FOOD</a></p>
+            <p><a href="#CatAccessories">CAT ACCESSORIES</a></p>
+            <p><a href="about.html">ABOUT</a></p>
+        </nav>
+
+        <nav class="menu1">
+            <p><a href="#heading">HOME</a></p>
+            
+            <div class="dogDropdown">
+                <p>DOG ▼</p>
+                <div class="dogList">
+                    <p><a href="#DogFood">DOG FOOD</a></p>
+                    <p><a href="#DogAccessories">DOG ACCESSORIES</a></p>
+                </div>
+            </div>
+
+            <div class="catDropdown">
+                <p>CAT ▼</p>
+                <div class="catList">
+                    <p><a href="#CatFood">CAT FOOD</a></p>
+                    <p><a href="#CatAccessories">CAT ACCESSORIES</a></p>
+                </div>
+            </div>
+
+            <p><a href="about.html">ABOUT</a></p>
+        </nav>
+
+        <div id="subhead">
+            <div id="slider-pics">
+                <div id="pictures">
+                    <img src="https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/281865327_1038203280466854_7663945952810971681_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGoAIYqDQ-mre9b5N21adK8n944aPhKaNqf3jho-Epo2h93Wr-JZtoh5Whkn91Uv7PSJYENTpbXr6046lROi6zU&_nc_ohc=PVJux_59_K8AX-kNyfS&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVIW-fRrTDY3LpXOlO42t-8T1qvvLODZ4Ppz5pw5ByRxUg&oe=62BF1AD9" alt="subhead" id="subhead-img">
+                </div>
+                
+                <div id="DogFood"></div>
+            </div>
+        </div>
+        
+
+        <div id="sectionProducts">
+            <div>
+                <div>
+                    <p class="subtitles">DOG FOODS</p>
+                    <div id="products1"></div>
+                </div>
+                <div id="DogAccessories"></div>
+
+                <div>
+                    <p class="subtitles">DOG APPAREL</p>
+                    <div id="products3"></div>
+                </div>
+                <div id="CatFood"></div>
+                
+                <div>
+                    <p class="subtitles">CAT FOODS</p>
+                    <div id="products2"></div>
+                </div>
+                <div id="CatAccessories"></div>
+
+                <div>
+                    <p class="subtitles">CAT APPAREL</p>
+                    <div id="products4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sectionCustomer">
+            <div id="formList">
+                <p class="subtitles1">DELIVERY</p>
+
+                <div id="list">
+                    <p class="subtitles3">CART</p>
+                    <div id="cart"></div>
+                    
+                    <p class="price"><b>Total:</b> ₱<span id="total">0</span></p>
+                </div>
+                
+                <div id="form">
+                    <p class="subtitles3">CUSTOMER DETAILS</p>
+
+                    <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="GET" onsubmit="execution()">
+                        <label>Name:</label><br>
+                        <input name="cust_name" class="details" type="text"><br>
+                        <label>E-Mail:</label><br>
+                        <input name="cust_email" class="details" type="email"><br>
+                        <label>Address:</label><br>
+                        <input name="cust_addr" class="details" type="text">
+                        <input type="submit" value="Submit" id="submit">
+                        <input type="hidden" name="cust_order" id="cust_order" value="cart">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            © 2022 paws&claws. All Rights Reserved.
+        </footer>
+
+        <script>
+            var products1 = [];
+            var products2 = [];
+            var products3 = [];
+            var products4 = [];
+            var cart = [];
+            var totalPrices = 0;
+    
+            var item = {
+            product_pic: "https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/280282192_1725248124483265_1940940074700135110_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFvRdJx1yRUCw8CPzOkM_gSSXgexycCFaFJeB7HJwIVoe-HCDcaBvjjomwtPQCNxVEAALG-Tt852NcKVzHc8odt&_nc_ohc=UGWsOyHF2ewAX9PtffE&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVItu8mgpj2Av3I8V9XxqeEhd7JDIs1-jbXNMgr5LHRfaA&oe=62BEB205",
+            productName: "Tiki Dog Aloha Petites Duck Luau Dry Dog Food Bag, 3.5 lb",
+            price: 949.49,
+            };
+            products1.push(item);
+
+            var item = {
+                product_pic: "https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.15752-9/280483894_1066326880987992_2776933692056671654_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGUJs5Okx4N8n8sffFJdWqCG_C-JL5opYQb8L4kvmilhMHy2iFV3baIbKX01k6MMmrSoNqnI8IggfP7Q-JmxoT3&_nc_ohc=JRqtYGkbBSkAX9BLPU8&_nc_ht=scontent.fmnl9-1.fna&oh=03_AVKZwbwsVXPTwnqfEWNj85kNNLL1f_U5X5ca-A3zXGbwaA&oe=62BCF498",
+                productName: "Tiki Dog Aloha Petites Fish Luau Dry Dog Food Bag, 3.5 lb",
+                price: 949.49,
+            }
+            products1.push(item);
+
+            var item = {
+                product_pic: "https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/283976195_794425664874383_6666366026509770220_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeF6nTn2VNTA0izALLNUDkPQypW8cJ85Fc3KlbxwnzkVzXtUIn3ZJmsFmiY6XmsCh3TnhkQjQCsYmrQeo7QhlIPk&_nc_ohc=IbW7OnctkZUAX9KV39a&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVIbxIDn6CbJBL2BeDEAFGQ0EqCWr8zXPn9FJcacK2x6bw&oe=62BEA915",
+                productName: "Tiki Dog Aloha Petites Chicken Luau Dry Dog Food Bag, 3.5 lb",
+                price: 949.49,
+            }
+            products1.push(item);
+
+            var item = {
+                product_pic: "https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/280641405_1104446367082852_5228291398631878056_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGfzp45knR2l85JId-1zp-0t0XnN04Ar7e3Rec3TgCvtwe3DRtb9ATbZ2ruxzoRoo0BcQUEH5-FWKQjdUfiBIqr&_nc_ohc=trjTbTlAgNEAX9DQOwW&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVJWO0EkPbjd965y8SWx8T70DGkYAhpF-m78JKX5OMCypg&oe=62BC5B7A",
+                productName: "Pedigree Home Style Beef Recipe Wet Dog Food Can, 400g",
+                price: 115,
+            };
+            products1.push(item);
+
+            var item = {
+                product_pic: "https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/282136151_805857367063380_5950097315354733419_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFtRp0r-mzVC6ZEmS1UrSdXmg6Q4nkbp72aDpDieRunvbDqT5esYEaegD3b9kBOnOLlq5wGU_1xhfJH5VaTTQpU&_nc_ohc=6YEG7mFVMFEAX8u7YJ2&_nc_oc=AQllk9ngSiQe87QAYttQgEzZJKbdaRafcFqsANLqAKvfhf_czDLr7CSK-2qyinwEdCI&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVKI4m1Z8TpT69bryhMNFlSdkbkFuaVswEhdfk48Qj_zew&oe=62BC67A6",
+                productName: "Pedigree Home Style Chicken Recipe Wet Dog Food Can, 400g",
+                price: 115,
+            };
+            products1.push(item);
+
+            var item = {
+                product_pic: "https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.15752-9/281557028_1289837228212537_4184763544997985685_n.png?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHLU2qYgPZsp6zbh3DkLfl99hpwvXgdbRv2GnC9eB1tGx6UGEXlKkztQDaR6BR8AJhe5QsIWR_URF9rVVTKBmDE&_nc_ohc=ZxLb_349JiwAX_6wLQw&_nc_ht=scontent.fmnl9-1.fna&oh=03_AVKblZchc1pncJao-FBy9BDn-dI30tqFXq7iM0fRajaFyA&oe=62BD5F5C",
+                productName: "Pedigree Home Style 5 Kinds of Meat Wet Dog Food Can, 400g",
+                price: 115,
+            };
+            products1.push(item);
+            // DOG FOODS -- end
+
+            // CAT FOODS -- start
+            
+            var item1 = {
+                product_pic: "https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/283595137_731391724764820_2997277790838592895_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEkuJq7HoPh0RYgpx6Ajoug7MI04lNJG7HswjTiU0kbsfAwJ7IQz0VmQp1OYHnq49Fd0m7xL-Gx6OIit28Wl6NS&_nc_ohc=DH6I6_bPuwwAX9MQQnc&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVLDBhdSDMl7aNBmTuIs1vgEwk0HbOV-fY7LIeuQP-eirw&oe=62BD93DA",
+                productName: "Goodest Cat Tender Tuna Wet Cat Food Pouch, 85g ",
+                price: 29.99,
+            }
+            products2.push(item1);
+
+            var item1 = {
+                product_pic: "https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/279970866_421446662915893_8384215874195685566_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGzcJAubdRcmIK0s81TEyMXY-0mBj3dYllj7SYGPd1iWScQCGkIk8BbAWWUJ1MY_guLXCX-hsKsm5YkUUzK73w-&_nc_ohc=ZXWgGiwu-K4AX-ABeth&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVK2DW9spZB5rUUOi0k-O0nqRiMl9-DxCjEBgx0A9tALhA&oe=62BEB251",
+                productName: "Goodest Cat Meaty Mackerel Wet Cat Food Pouch, 85g",
+                price: 29.99,
+            }
+            products2.push(item1);
+
+            var item1 = {
+                product_pic: "https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/280289228_964503390883233_3419276980653860243_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHIHRM0I35k4mGU-_5W0mBc1N8sxv_9DtLU3yzG__0O0uvW6Q1fD7jFCcBghLtrjTUoWEy5dFQYV2ayr2z37TZv&_nc_ohc=aZHZl-6hdmQAX9EBRmw&_nc_oc=AQkpAxBzjcOM6Zn6-WEZAmkF1C78bCRa3DTTYjz0TLPGmmrrnVc85z3i0HbQKMEne_Q&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVJCwpc2rY6GLt-KjyMeqM9E-luqeGBYHQgP74QyShOdJA&oe=62BC5C85",
+                productName: "Goodest Cat Chicken Chomp Wet Cat Food Pouch, 85g",
+                price: 29.99,
+            }
+            products2.push(item1);
+
+            var item1 = {
+                product_pic: "https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/281742200_331896325770189_4602975373792217011_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeH_39gBsXBpsOYpptHHvbsr8CkpkRBsYijwKSmREGxiKEMOZxIgsK29bEFJ_BeiRkfar9J7ZchYfC6j28VOicNq&_nc_ohc=RGIlsAVopIoAX8tMgS2&tn=PgEjhZWGhoSWOy0j&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVKupTk5vS_Ps6tdj1jOYiagfXuCFapX6Kezwdkmnz8-Rg&oe=62BEE25E",
+                productName: "Tiki Cat Velvet Mousse Salmon in Broth Wet Cat Food Pouch, 2.8 oz",
+                price: 249.49,
+            };
+            products2.push(item1);
+
+            var item1 = {
+                product_pic: "https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/279048273_1167905313995629_7192547963615660507_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEDq6ylACaK2C36OoWJfxpFqxV3qq3Wso-rFXeqrdayj8NvYvfRD9h3pX0SCOVe-7v2fPws8TuOSvg72QPGq2ck&_nc_ohc=rwJSUdlTevAAX9cRatC&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVJvKV2uLWr-edk9rUgTlfjJdBLFSa6kces4Q6ZAQEedRA&oe=62BD394C",
+                productName: "Tiki Cat Velvet Mousse Tuna & Mackerel Wet Cat Food Pouch, 2.8 oz",
+                price: 249.49,
+            }
+            products2.push(item1);
+
+            var item1 = {
+                product_pic: "https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/282430516_2378318212307485_5318827980036415733_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeF7PUlmqEVdQQNP80SgISulCVxw4B4bAxwJXHDgHhsDHGBoSnvAkVOlYvhYzabRdIZvMgr7TlJrTrAEBGlHwCRx&_nc_ohc=KwwjVQb6adkAX9S3r74&_nc_oc=AQn8UYuMRoRztKJXE1O9K7Ge2somYTOnkc4EvKZvxxunGqr_zF2feP1Sg21sGg-YXHA&tn=PgEjhZWGhoSWOy0j&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVLE4VhfCkVztKty_7UNDcWsHDKeQrlZrFCSZXN5C-J8_g&oe=62BE14F5",
+                productName: "Tiki Cat Velvet Mousse Chicken in Broth Wet Cat Food Pouch, 2.8 oz",
+                price: 249.49,
+            }
+            products2.push(item1);
+            // CAT FOODS -- end
+
+            // DOG ACCESSORIES -- start
+            var item2 = {
+                product_pic: "https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/284495162_356260756575277_992600595110815115_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGF85pHBvIQgljS4X1mm0Ew4_W7pOMP-mPj9buk4w_6Y091ymYif-ZGF_8_E1RzWQ4QX7H5G5Gny01l3C7c-2nw&_nc_ohc=A50lT0o_RnsAX9dujFZ&tn=PgEjhZWGhoSWOy0j&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVLbktavwevf69kgj3ARxz5e_Nis3wmXhpzqiVSMNlE4_A&oe=62BC814C",
+                productName: "Pup Closet 3-Piece Dog Birthday Party Set",
+                price: 750,
+            };
+            products3.push(item2);
+
+            var item2 = {
+                product_pic: "https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/281105866_757732941920364_4346870668664178801_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGEqe-utnF3IbAIozrE1mw7Vpd9LXhJmNpWl30teEmY2vfFtLW_UkYn3drRCfxb7qVK2N3L4TghDtXui4MKGxAx&_nc_ohc=Tz0Gv029FRYAX_A2iv2&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVJYCNltwkMr2_54k5sIIm9ZqRK-bspjWZ_FluXAQY7poQ&oe=62BE7684",
+                productName: "PAWsh Plaid Doggo Polo Shirt with Bow Tie",
+                price: 650,
+            }
+            products3.push(item2);
+
+            var item2 = {
+                product_pic: "https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/280393640_437171508221627_8570665488577633038_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHjzdzTsL3v67iBzrOxwEYZJfzgjsafrVUl_OCOxp-tVeTRh9OJCXZk4FQ132sTbnQEFF4SFUaXvcYiIuFCvPk3&_nc_ohc=BEaioPQF9wEAX9Q1o8-&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVK5SXnWgff7jkcBh-Y5wc9XjEBVZEdWUIFGp1IFRwTPnw&oe=62BF22FD",
+                productName: "Purr Plush Knit Doggo Sweater with Beanie",
+                price: 600,
+            }
+            products3.push(item2);
+
+            var item2 = {
+                product_pic: "https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.15752-9/279570457_544662763829831_4784024618254183152_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHAQ3PLffXhtyIz3NWM6e5MARup9g9ocO8BG6n2D2hw736QpJXtzHI7dXEXLDwig9LNOoYfCPlIZyGMi486AQKn&_nc_ohc=agrR0UoOKgwAX8q-PsM&_nc_ht=scontent.fmnl9-1.fna&oh=03_AVKUtaTh4cUoBfKdA8V2FqVgctsVo7TkIWCDen0IO8_SWw&oe=62BF985C",
+                productName: "Puppy Style Formal Doggo Tuxedo with Bow Tie",
+                price: 650,
+            }
+            products3.push(item2);
+
+            var item2 = {
+                product_pic: "https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/282158666_1103540033913098_698349402343826641_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHYzWpwpsjqGLe6GbuZOnLJMrPOxMFKupIys87EwUq6kplb7eYi4oLALrIcZbHDFee2KU81IrN6T7XKPZgn0tqG&_nc_ohc=4eynGhRtMaMAX_2eKR1&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVLAfYAWclFe03w_-5nVue-FEJ6QtXoApOj5INMvotD99g&oe=62BF4444",
+                productName: "Rose Couture Formal Harness Tutu Dress for Dogs",
+                price: 700,
+            }
+            products3.push(item2);
+
+            var item2 = {
+                product_pic: "https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/282137255_2292155094274281_3013372363157673576_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEU4iRwI9cw9E3xN6SSXBcrngKF7QK-9XWeAoXtAr71dbzLp15sOEJ6PEnFY0uw_fkq3ZiQg2Qy6DF5IsDVBKag&_nc_ohc=JGRcAJEgl8kAX_iIsHh&_nc_oc=AQl3_T1iL9wVeXKzw2rDeijHq7ToiFlwFbmsWNJq1dxafoNXn29rUbfNE6SiN5SQXIg&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVJnzAB7ypQcmRI8DEpaERCgHt5lQPhE4IS5d3P8ocEKPQ&oe=62BD92A4",
+                productName: "Mr. Snuggles Hotdog Pet Dog Cosplay Costume",
+                price: 550,
+            }
+            products3.push(item2);
+            // DOG ACCESSORIES -- end
+
+            // CAT ACCESSORIES -- start
+            var item3 = {
+                product_pic: "https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/279434612_393092346089023_5924040055610954367_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHuDkcm0x0fgiye48fE3dxurbGXVroPz1itsZdWug_PWHgpQ0SGhgPuNxrzF2PjL_k-uOu3KIcRHZlmMdAwbeVs&_nc_ohc=8vbKxFtwpn8AX9dUT2j&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVL4N1N9x8Rjx0qqMx4ttst3eujQiM6ejVCxEhNOXuIUEw&oe=62BD96DF",
+                productName: "Kitty Perry 2-Piece Cat Birthday Set",
+                price: 350,
+            };
+            products4.push(item3);
+
+            var item3 = {
+                product_pic: "https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.15752-9/285254826_1020315955514280_8492606964818280229_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHRMw9up5zS9TgYkPiy0IQ4t0y6q3JchHu3TLqrclyEe5rdC_QDcbxb62jyTV1X26vCXjwX7CmQEIq4qyWgDPua&_nc_ohc=JDcADHOFXhIAX_NXsQI&_nc_ht=scontent.fmnl9-1.fna&oh=03_AVLNa0cBR2LbBQPkGMcHKiyC3ChPW5LGvou4jXmDPw6s0g&oe=62BCC120",
+                productName: "Tom Nook-Inspired Printed Cat Polo Shirt",
+                price: 700,
+            }
+            products4.push(item3);
+
+            var item3 = {
+                product_pic: "https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/281186469_1150738448821746_8724196654588498162_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEu4NcLuZVsCBA3x1axNXmiDPWetMftKDIM9Z60x-0oMqqdkLdUsq3XWOpvzuBFLUegAdfgC5Zwg-3QUb3-qkYr&_nc_ohc=X5DIMh5iq_wAX8ynqmQ&_nc_oc=AQlT4J0SBrYAEMdHZ79_kE8MBaMyk3iBxwWfNXx5kPVu3SFiah9g9E3SPas5vgxMSyw&tn=PgEjhZWGhoSWOy0j&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVLQT2EBQS7EgZ8ZqHRfr-EH0LqwbM9mkgdqEl3kMLixbg&oe=62BD8AEF",
+                productName: "Cutesy Closet Fleece Cat Hoodie",
+                price: 450,
+            }
+            products4.push(item3);
+
+            var item3 = {
+                product_pic: "https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/280041784_388754719701347_7672083886114203163_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEulSf403jy6vuaiABMm-WSHfx1xSgyc10d_HXFKDJzXTDSd3GId5-bqRYGLVV7ksR1OI5NmsivfKcAe8ToCgZI&_nc_ohc=RSUkdYxstKwAX-j_ggn&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVLFi4wQeYTpRI8Ud_MSauSNedRdjHg0Le29qxRJ9JMqLg&oe=62BEC179",
+                productName: "Clawy Couture Cat Furr Sweater with Beanie",
+                price: 550,
+            }
+            products4.push(item3);
+
+            var item3 = {
+                product_pic: "https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/281132268_5052013744885923_4415426672525985332_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHT9jGjb3pYh3PPbuF7ZVzlC0egSF4PwFYLR6BIXg_AVuRZrt28H88zdECWBFyadrg3JNyMNa-5q-gSbPhIWuh-&_nc_ohc=PUqKHrYsbdQAX9ckbll&_nc_ht=scontent.fmnl9-3.fna&oh=03_AVINgw1rucKhHfdF2KZQ98_YY-MasXc6q3XpjQ6xf8O61w&oe=62BE0BB6",
+                productName: "Cats & Co. Christmas Tree Cat Costume",
+                price: 700,
+            }
+            products4.push(item3);
+
+            var item3 = {
+                product_pic: "https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/281466566_1006674933317169_486693928539914924_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEGEbFgX8Zo2ov8LPN0NPWA9mbRcaAkrEH2ZtFxoCSsQSrRT_H7jbVnj-ua9KXAjoRMerghB2dltLvceWOCQGAH&_nc_ohc=GuMZGC1nq-QAX9cQlAN&_nc_ht=scontent.fmnl9-2.fna&oh=03_AVLcyXPf2LAmKW-4f6TwBcWGBPFAtQQgdm-F5qUPpJ11YA&oe=62BD216A",
+                productName: "Cats & Co. Cowboy-Inspired Cat Costume",
+                price: 650,
+            }
+            products4.push(item3);
+            // CAT ACCESSORIES -- end    
+    
+            function displayproducts1() {
+                document.getElementById('products1').innerHTML = "";
+                for (var i = 0; i < products1.length; i++) {
+                    document.getElementById('products1').innerHTML += '<div class="products"><div class="img"><img src="' + products1[i].product_pic + '" class="productsPic"></div><div class="items"><p class="productsTitle">' + products1[i].productName + '</p><p class="productsPrice">₱' + products1[i].price + '</p><button class="add" onclick="addToCart1(' + i + ')">Add to Cart</button></div></div>';
+                }
+            }
+            displayproducts1();
+    
+            function displayproducts2() {
+                document.getElementById('products2').innerHTML = "";
+                for (var i = 0; i < products2.length; i++) {
+                    document.getElementById('products2').innerHTML += '<div class="products"><div class="img"><img src="' + products2[i].product_pic + '" class="productsPic"></div><div class="items"><p class="productsTitle">' + products2[i].productName + '</p><p class="productsPrice">₱' + products2[i].price + '</p><button class="add" onclick="addToCart2(' + i + ')">Add to Cart</button></div></div>';
+                }
+            }
+            displayproducts2();
+    
+            function displayproducts3() {
+                document.getElementById('products3').innerHTML = "";
+                for (var i = 0; i < products3.length; i++) {
+                    document.getElementById('products3').innerHTML += '<div class="products"><div class="img"><img src="' + products3[i].product_pic + '" class="productsPic"></div><div class="items"><p class="productsTitle">' + products3[i].productName + '</p><p class="productsPrice">₱' + products3[i].price + '</p><button class="add" onclick="addToCart3(' + i + ')">Add to Cart</button></div></div>';
+                }
+            }
+            displayproducts3();
+    
+            function displayproducts4() {
+                document.getElementById('products4').innerHTML = "";
+                for (var i = 0; i < products4.length; i++) {
+                    document.getElementById('products4').innerHTML += '<div class="products"><div class="img"><img src="' + products4[i].product_pic + '" class="productsPic"></div><div class="items"><p class="productsTitle">' + products4[i].productName + '</p><p class="productsPrice">₱' + products4[i].price + '</p><button class="add" onclick="addToCart4(' + i + ')">Add to Cart</button></div></div>';
+                }
+            }
+            displayproducts4();
+    
+            function displayCart() {
+                document.getElementById('cart').innerHTML = "";
+                for (var i = 0; i < cart.length; i++) {
+                    document.getElementById('cart').innerHTML += '<div><div class="cartList" style="width: 83%;"><p class="listProducts">' + cart[i].prod_name + '</p><p class="listPrices">P' + cart[i].prod_price + '</p></div><button id="deleteButton" onclick="remove(' + i + ')"><span class="material-icons">delete_outline</span></button></div>';
+                }
+            }
+            displayCart();
+    
+            function addToCart1(i) {
+                var m = products1[i].productName;
+                var c = products1[i].price;
+                var p = { prod_name: m, prod_price: c };
+                cart.push(p);
+                displayproducts1();
+                displayCart();
+    
+                totalPrices += c;
+                document.getElementById('total').innerHTML = totalPrices;
+            }
+    
+            function addToCart2(i) {
+                var m = products2[i].productName;
+                var c = products2[i].price;
+                var p = { prod_name: m, prod_price: c };
+                cart.push(p);
+                displayproducts2();
+                displayCart();
+    
+                totalPrices += c;
+                document.getElementById('total').innerHTML = totalPrices;
+            }
+    
+            function addToCart3(i) {
+                var m = products3[i].productName;
+                var c = products3[i].price;
+                var p = { prod_name: m, prod_price: c };
+                cart.push(p);
+                displayproducts3();
+                displayCart();
+    
+                totalPrices += c;
+                document.getElementById('total').innerHTML = totalPrices;
+            }
+    
+            function addToCart4(i) {
+                var m = products4[i].productName;
+                var c = products4[i].price;
+                var p = { prod_name: m, prod_price: c };
+                cart.push(p);
+                displayproducts4();
+                displayCart();
+    
+                totalPrices += c;
+                document.getElementById('total').innerHTML = totalPrices;
+            }
+            
+    
+            function remove(i) {
+                var removePrice = cart[i].prod_price;
+                cart.splice(i, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                displayCart();
+    
+                totalPrices -= removePrice;
+                document.getElementById('total').innerHTML = totalPrices;
+            }
+    
+            cust_order.push(totalPrices);
+    
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "200px";
+                document.getElementById("main").style.marginLeft = "200px";
+            }
+    
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+            function execution() {
+                    document.getElementById("cust_order").value = JSON.stringify(cart);
+            }	
+        </script>
+    </body>
+
+</html>
